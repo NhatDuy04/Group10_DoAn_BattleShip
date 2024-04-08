@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A57FBD58-E4CE-4B51-9761-70A85E75D9D2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Battleships</RootNamespace>
+    <AssemblyName>Battleships</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreditsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreditsForm.Designer.cs">
+      <DependentUpon>CreditsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainGameForm.Designer.cs">
+      <DependentUpon>MainGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordCheckForm.Designer.cs">
+      <DependentUpon>PasswordCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShipDeploymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipDeploymentForm.Designer.cs">
+      <DependentUpon>ShipDeploymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingleplayerSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingleplayerSettingsForm.Designer.cs">
+      <DependentUpon>SingleplayerSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiplayerSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiplayerSettingsForm.Designer.cs">
+      <DependentUpon>MultiplayerSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreditsForm.resx">
+      <DependentUpon>CreditsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainGameForm.resx">
+      <DependentUpon>MainGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordCheckForm.resx">
+      <DependentUpon>PasswordCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipDeploymentForm.resx">
+      <DependentUpon>ShipDeploymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiplayerSettingsForm.resx">
+      <DependentUpon>MultiplayerSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingleplayerSettingsForm.resx">
+      <DependentUpon>SingleplayerSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\grid4.jpg" />
+    <None Include="Resources\grid3.jpg" />
+    <None Include="Resources\grid1.jpg" />
+    <None Include="Resources\grid2.jpg" />
+    <None Include="Resources\grid.jpg" />
+    <None Include="Resources\succ.png" />
+    <None Include="Resources\fail.png" />
+    <None Include="Resources\beach21.jpg" />
+    <None Include="Resources\beach2.jpg" />
+    <None Include="Resources\login21.jpg" />
+    <None Include="Resources\Saki-Snowish-Ok.24.png" />
+    <None Include="Resources\Tatice-Cristal-Intense-Reload.24.png" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-window-close.24.png" />
+    <None Include="Resources\credit2.jpg" />
+    <None Include="Resources\MainGamePic6.jpg" />
+    <None Include="Resources\login6.jpg" />
+    <None Include="Resources\ship2.jpg" />
+    <None Include="Resources\login5.jpg" />
+    <None Include="Resources\login4.jpg" />
+    <None Include="Resources\login3.jpg" />
+    <None Include="Resources\ship1.jpg" />
+    <None Include="Resources\ship.jpg" />
+    <None Include="Resources\login2.jpg" />
+    <None Include="Resources\Iconsmind-Outline-Yes.24.png" />
+    <None Include="Resources\main21.jpg" />
+    <None Include="Resources\Iconsmind-Outline-Close.24.png" />
+    <None Include="Resources\Aniket-Suvarna-Box-Logo-Bxl-wikipedia.24.png" />
+    <None Include="Resources\Pictogrammers-Material-Light-Credit-card.24.png" />
+    <None Include="Resources\Ionic-Ionicons-Play-forward-circle-outline.24.png" />
+    <None Include="Resources\Ionic-Ionicons-Play-circle-outline.24.png" />
+    <None Include="Resources\Aniket-Suvarna-Box-Logo-Bxl-gmail.24.png" />
+    <None Include="Resources\Iconoir-Team-Iconoir-Instagram.24.png" />
+    <None Include="Resources\Icons8-Ios7-Logos-Facebook.24.png" />
+    <None Include="Resources\Icons8-Windows-8-Security-Password-2.24.png" />
+    <None Include="Resources\Icons8-Windows-8-Users-Name.24.png" />
+    <None Include="Resources\Pictogrammers-Material-Login-variant.24.png" />
+    <None Include="Resources\download %281%291.jpg" />
+    <None Include="Resources\download %281%29.jpg" />
+    <None Include="Resources\login.jpg" />
+    <None Include="Resources\Martz90-Circle-Gmail.48.png" />
+    <None Include="Resources\Designbolts-Free-Instagram-Active-Instagram-4.48.png" />
+    <None Include="Resources\Yootheme-Social-Bookmark-Social-facebook-button-blue.48.png" />
+    <None Include="Resources\Pictogrammers-Material-Login-variant.48.png" />
+    <None Include="Resources\Icons8-Windows-8-Security-Password-1.48.png" />
+    <None Include="Resources\Icons8-Windows-8-Security-Password-1.64.png" />
+    <None Include="Resources\Icons8-Windows-8-Security-Password-2.64.png" />
+    <None Include="Resources\Pictogrammers-Material-Account.64.png" />
+    <None Include="Resources\credit.jpg" />
+    <None Include="Resources\main2.jpg" />
+    <None Include="Resources\Main.jpg" />
+    <None Include="Resources\CreditGamePic.jpg" />
+    <None Include="Resources\Screenshot 2024-04-07 001908.png" />
+    <None Include="Resources\MainGamePic5.jpg" />
+    <None Include="Resources\MainGamePic4.jpg" />
+    <None Include="Resources\MainGamePic3.jpg" />
+    <None Include="Resources\MainGamePic2.jpg" />
+    <None Include="Resources\MainGamePic1.jpg" />
+    <None Include="Resources\Rafiqul-Hassan-Blogger-Close.64.png" />
+    <None Include="Resources\Iconsmind-Outline-Close.64.png" />
+    <None Include="Resources\Pictogrammers-Material-Light-Credit-card-scan.64.png" />
+    <None Include="Resources\Aniket-Suvarna-Box-Logo-Bxl-wikipedia.64.png" />
+    <None Include="Resources\Pictogrammers-Material-Play.64.png" />
+    <None Include="Resources\Ảnh battleship.png" />
+    <None Include="Resources\Hopstarter-Button-Button-Play.256.png" />
+    <None Include="Resources\MainGamePic.jpg" />
+    <None Include="Resources\victorySound.wav" />
+    <None Include="Resources\splashImage.png" />
+    <None Include="Resources\splash2Sound.wav" />
+    <None Include="Resources\splash1Sound.wav" />
+    <None Include="Resources\splash0Sound.wav" />
+    <None Include="Resources\shot2Sound.wav" />
+    <None Include="Resources\shot1Sound.wav" />
+    <None Include="Resources\shot0Sound.wav" />
+    <None Include="Resources\ship4Image.png" />
+    <None Include="Resources\ship3Image.png" />
+    <None Include="Resources\ship2Image.png" />
+    <None Include="Resources\ship1Image.png" />
+    <None Include="Resources\ship0Image.png" />
+    <None Include="Resources\rotateImage.png" />
+    <None Include="Resources\okImage.png" />
+    <None Include="Resources\menuSound.wav" />
+    <None Include="Resources\menuImage.jpg" />
+    <None Include="Resources\hitImage.png" />
+    <None Include="Resources\hit2Sound.wav" />
+    <None Include="Resources\hit1Sound.wav" />
+    <None Include="Resources\hit0Sound.wav" />
+    <None Include="Resources\drumSound.wav" />
+    <None Include="Resources\deck3Image.jpg" />
+    <None Include="Resources\deck2Image.jpg" />
+    <None Include="Resources\deck1Image.jpg" />
+    <None Include="Resources\deck0Image.jpg" />
+    <None Include="Resources\creditsImage.jpg" />
+    <None Include="Resources\cancelImage.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
