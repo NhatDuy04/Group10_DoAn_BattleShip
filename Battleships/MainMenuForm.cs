@@ -20,27 +20,12 @@ namespace Battleships
             Application.Exit();
         }
 
-        private void SingleplayerButtonClick(object sender, EventArgs e)
-        {
-            // Set game to a Singleplayer.
-            Game.gameMode = true;
-            Game.Initialize();
-
-            // Initialize players.
-            Game.player1 = new Player();
-            Game.player2 = new Player();
-
-            // Temporarily hide MainMenuForm and store its pointer.
-            SingleplayerSettingsForm singleplayerSettingsForm = new SingleplayerSettingsForm();
-            singleplayerSettingsForm.Location = Location;
-            singleplayerSettingsForm.Show();
-            Hide();
-        }
+        
 
         private void MultiplayerButtonClick(object sender, EventArgs e)
         {
             // Set game to a multiplayer.
-            Game.gameMode = false;
+           
             Game.Initialize();
 
             // Initialize players.

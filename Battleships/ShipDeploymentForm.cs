@@ -225,52 +225,6 @@ namespace Battleships
         }
 
         // Theese methods are all the same for all the delete buttons.
-        private void DeleteShip0ButtonClick(object sender, EventArgs e)
-        {
-            // Delete the given ship from the deck.
-            Game.DeleteShip(0, player.ShipSet);
-            // Redraw the deck.
-            deckPictureBox.Refresh();
-            deployShip0Button.Enabled = true;
-            deleteShip0Button.Enabled = false;
-            doneButton.Enabled = false;
-        }
-
-        private void DeleteShip1ButtonClick(object sender, EventArgs e)
-        {
-            Game.DeleteShip(1, player.ShipSet);
-            deckPictureBox.Refresh();
-            deployShip1Button.Enabled = true;
-            deleteShip1Button.Enabled = false;
-            doneButton.Enabled = false;
-        }
-
-        private void DeleteShip2ButtonClick(object sender, EventArgs e)
-        {
-            Game.DeleteShip(2, player.ShipSet);
-            deckPictureBox.Refresh();
-            deployShip2Button.Enabled = true;
-            deleteShip2Button.Enabled = false;
-            doneButton.Enabled = false;
-        }
-
-        private void DeleteShip3ButtonClick(object sender, EventArgs e)
-        {
-            Game.DeleteShip(3, player.ShipSet);
-            deckPictureBox.Refresh();
-            deployShip3Button.Enabled = true;
-            deleteShip3Button.Enabled = false;
-            doneButton.Enabled = false;
-        }
-
-        private void DeleteShip4ButtonClick(object sender, EventArgs e)
-        {
-            Game.DeleteShip(4, player.ShipSet);
-            deckPictureBox.Refresh();
-            deployShip4Button.Enabled = true;
-            deleteShip4Button.Enabled = false;
-            doneButton.Enabled = false;
-        }
         
         private void ShipRotateButtonClick(object sender, EventArgs e)
         {
@@ -279,18 +233,7 @@ namespace Battleships
 
         private void DoneButtonClick(object sender, EventArgs e)
         {
-            if (Game.gameMode)
-            {
-                Game.AIDeployShips();
-                MainGameForm mainGame = new MainGameForm();
-                mainGame.Location = Location;
-                mainGame.Show();
-
-                // Dispose does not trigger FormClosing event.
-                Dispose();
-            }
-            else
-            {
+            
                 if (Game.playerSwitch)
                 {
                     Game.playerSwitch = !Game.playerSwitch;
@@ -311,7 +254,7 @@ namespace Battleships
                     // Dispose does not trigger FormClosing event.
                     Dispose();
                 }
-            }
+            
         }
 
         private void DeckPictureBoxPaint(object sender, PaintEventArgs e)

@@ -64,54 +64,7 @@ namespace Battleships
             battleLogRichTextBox.Text = yourPlayer.BattleLog;
             battleLogRichTextBox.Refresh();
 
-            yourHitsTextBox.Text = yourPlayer.Hits.ToString();
-            yourHitsTextBox.Refresh();
-            yourMissesTextBox.Text = yourPlayer.Misses.ToString();
-            yourMissesTextBox.Refresh();
-
-            if (opponentPlayer.UnrevealedCells != 100)
-            {
-                yourHitRatioTextBox.Text = String.Format("{0:0.##}", yourPlayer.HitRatio * 100) + " %"; 
-            }
-            else
-            {
-                yourHitRatioTextBox.Text = "-";
-            }
-            yourHitRatioTextBox.Refresh();
-
-            yourUnrevealedCellsTextBox.Text = yourPlayer.UnrevealedCells.ToString();
-            yourUnrevealedCellsTextBox.Refresh();
-
-            yourShipCellsLeftTextBox.Text = yourPlayer.ShipCells.ToString();
-            yourShipCellsLeftTextBox.Refresh();
-
-            yourShipsLeftTextBox.Text = yourPlayer.ShipsLeft.ToString();
-            yourShipsLeftTextBox.Refresh();
             
-            opponentHitsTextBox.Text = opponentPlayer.Hits.ToString();
-            opponentHitsTextBox.Refresh();
-
-            opponentMissesTextBox.Text = opponentPlayer.Misses.ToString();
-            opponentMissesTextBox.Refresh();
-            
-            if (yourPlayer.UnrevealedCells != 100)
-            {
-                opponentHitRatioTextBox.Text = String.Format("{0:0.##}", opponentPlayer.HitRatio * 100) + " %"; 
-            }
-            else
-            {
-                opponentHitRatioTextBox.Text = "-"; 
-            }
-            opponentHitRatioTextBox.Refresh();
-
-            opponentUnrevealedCellsTextBox.Text = opponentPlayer.UnrevealedCells.ToString();
-            opponentUnrevealedCellsTextBox.Refresh();
-
-            opponentShipCellsLeftTextBox.Text = opponentPlayer.ShipCells.ToString();
-            opponentShipCellsLeftTextBox.Refresh();
-
-            opponentShipsLeftTextBox.Text = opponentPlayer.ShipsLeft.ToString();
-            opponentShipsLeftTextBox.Refresh();
         }
 
         private void deckPictureBoxClick(object sender, EventArgs e)
@@ -128,7 +81,7 @@ namespace Battleships
                     RedrawStatistics();
 
                     // Wait few seconds.
-                    Thread.Sleep(4000);
+                    Thread.Sleep(40);
 
                     // Play the winning sound.
                     //AudioContext.vicotrySoundPlayer.Play();
@@ -158,66 +111,12 @@ namespace Battleships
                     RedrawStatistics();
 
                     // Wait few seconds.
-                    Thread.Sleep(4000);
+                    Thread.Sleep(40);
 
                     // Is the game a singleplayer?
-                    if (Game.gameMode)
-                    {
-                        int[] aiMove = Game.AIChooseCellToHit(yourPlayer);
-                        if (Game.PerformAttack(aiMove[0], aiMove[1], opponentPlayer, yourPlayer))
-                        {
-                            // End of game, the computer has won.
-                            // Scroll the battle log to the end.
-                            battleLogRichTextBox.ScrollToCaret();
-
-                            // Reset the side statistics.
-                            RedrawStatistics();
-
-                            // Reveal all the other ships.
-                            for (int currentShip = 0; currentShip < 5; currentShip++)
-                            {
-                                opponentPlayer.ShipLeftCells[currentShip] = 0;
-                            }
-
-                            // Computer has won.
-                            deck2PictureBox.Refresh();
-
-                            // Wait few seconds.
-                            Thread.Sleep(4000);
-
-                            // Play the menu music in loop.
-                            //AudioContext.menuSoundPlayer.PlayLooping();
-
-                            // Show the informational message box.
-                            MessageBox.Show("You were beaten, " + yourPlayer.Name + "! You have lost against " + opponentPlayer.Name + " in " + Game.roundCount + " rounds!", "Battleships: Game Over!");
-
-                            // Dispose the form and return to the main menu.
-                            Dispose();
-
-                            GlobalContext.MainMenuForm.Location = Location;
-                            GlobalContext.MainMenuForm.Show();
-                        }
-                        else
-                        {
-                            // Computer has not won yet.
-                            // Increase the round count.
-                            Game.roundCount++;
-
-                            // Scroll the battle log to the end.
-                            battleLogRichTextBox.ScrollToCaret();
-
-                            // Computer has not won yet.
-                            deck2PictureBox.Refresh();
-
-                            // Reset the side statistics.
-                            RedrawStatistics(); 
-                            
-                            // Wait few seconds.
-                            Thread.Sleep(4000);
-                        }
-                    }
-                    else
-                    {
+                    
+                    
+                    
                         // The game is a multiplayer. 
                         if (!Game.playerSwitch)
                         {
@@ -233,7 +132,7 @@ namespace Battleships
                         PasswordCheckForm passwordCheckForm = new PasswordCheckForm();
                         passwordCheckForm.Location = Location;
                         passwordCheckForm.Show();
-                    }
+                    
                 }                
             }
             

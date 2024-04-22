@@ -393,7 +393,7 @@
             this.deleteShip0Button.Size = new System.Drawing.Size(58, 60);
             this.deleteShip0Button.TabIndex = 6;
             this.deleteShip0Button.UseVisualStyleBackColor = true;
-            this.deleteShip0Button.Click += new System.EventHandler(this.DeleteShip0ButtonClick);
+            //this.deleteShip0Button.Click += new System.EventHandler(this.DeleteShip0ButtonClick);
             // 
             // deployShip0Button
             // 
@@ -446,7 +446,7 @@
             this.deleteShip1Button.Size = new System.Drawing.Size(58, 60);
             this.deleteShip1Button.TabIndex = 7;
             this.deleteShip1Button.UseVisualStyleBackColor = true;
-            this.deleteShip1Button.Click += new System.EventHandler(this.DeleteShip1ButtonClick);
+            //this.deleteShip1Button.Click += new System.EventHandler(this.DeleteShip1ButtonClick);
             // 
             // ship2GroupBox
             // 
@@ -475,7 +475,7 @@
             this.deleteShip2Button.Size = new System.Drawing.Size(58, 60);
             this.deleteShip2Button.TabIndex = 6;
             this.deleteShip2Button.UseVisualStyleBackColor = true;
-            this.deleteShip2Button.Click += new System.EventHandler(this.DeleteShip2ButtonClick);
+            //this.deleteShip2Button.Click += new System.EventHandler(this.DeleteShip2ButtonClick);
             // 
             // deployShip2Button
             // 
@@ -516,7 +516,7 @@
             this.deleteShip3Button.Size = new System.Drawing.Size(58, 60);
             this.deleteShip3Button.TabIndex = 6;
             this.deleteShip3Button.UseVisualStyleBackColor = true;
-            this.deleteShip3Button.Click += new System.EventHandler(this.DeleteShip3ButtonClick);
+            //this.deleteShip3Button.Click += new System.EventHandler(this.DeleteShip3ButtonClick);
             // 
             // deployShip3Button
             // 
@@ -557,7 +557,7 @@
             this.deleteShip4Button.Size = new System.Drawing.Size(58, 60);
             this.deleteShip4Button.TabIndex = 8;
             this.deleteShip4Button.UseVisualStyleBackColor = true;
-            this.deleteShip4Button.Click += new System.EventHandler(this.DeleteShip4ButtonClick);
+            //this.deleteShip4Button.Click += new System.EventHandler(this.DeleteShip4ButtonClick);
             // 
             // deployShip4Button
             // 
