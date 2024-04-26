@@ -63,6 +63,16 @@ namespace battleship.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _034368fc1b67bbcf89c24663218790a8 {
+            get {
+                object obj = ResourceManager.GetObject("034368fc1b67bbcf89c24663218790a8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap beach21 {
             get {
                 object obj = ResourceManager.GetObject("beach21", resourceCulture);
@@ -86,6 +96,16 @@ namespace battleship.Properties {
         internal static System.Drawing.Bitmap MainGamePic6 {
             get {
                 object obj = ResourceManager.GetObject("MainGamePic6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MainGamePic61 {
+            get {
+                object obj = ResourceManager.GetObject("MainGamePic61", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

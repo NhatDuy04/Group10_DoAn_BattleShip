@@ -52,7 +52,7 @@ namespace battleship
         Coord[] Destroyer = new Coord[2];
 
         string ipAddress = "";
-        int port = 12345;
+        int port = 357;
         bool server = false;
 
         IPAddress localAddress;
@@ -723,7 +723,7 @@ namespace battleship
             EnemyZones[x, y] = true;
             EnemyArray[x, y].Enabled = false;
             EDEnemyButtons(false);
-            label_turn.Text = "Their Turn";
+            label_turn.Text = "Luot cua dich";
             Coord newcoord = new Coord(x, y);
             Shoot(newcoord);
         }
@@ -797,8 +797,8 @@ namespace battleship
         // Builds the players board
         private void BuildPlayerBoard()
         {
-            int width = 30;
-            int height = 30;
+            int width = 35;
+            int height = 35;
             int x = 694;
             int y = 14;
             for (int i = 0; i < 10; i++)
@@ -806,12 +806,12 @@ namespace battleship
                 for (int j = 0; j < 10; j++)
                 {
                     if (j != 0)
-                        x += 50;
+                        x += 40;
                     Button b = new Button();
                     b.Size = new Size(height, width);
                     b.Location = new Point(x, y);
                     b.Text = "";
-                    b.BackColor = System.Drawing.Color.FromArgb(255, 30, 30, 30);
+                    b.BackColor = System.Drawing.Color.FromArgb(255, 180, 180, 185);
                     b.FlatStyle = FlatStyle.Flat;
                     b.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 200, 200, 200);
                     b.FlatAppearance.BorderSize = 1;
@@ -822,7 +822,7 @@ namespace battleship
                     PlayerArray[j, i] = b;
                     this.Controls.Add(PlayerArray[j, i]);
                 }
-                y += 50;
+                y += 40;
                 x = 694;
             }
         }
@@ -830,8 +830,8 @@ namespace battleship
         // Builds the enemy board
         private void BuildEnemyBoard()
         {
-            int width = 30;
-            int height = 30;
+            int width = 35;
+            int height = 35;
             int x = 1300;
             int y = 394;
             for (int i = 0; i < 10; i++)
@@ -839,12 +839,12 @@ namespace battleship
                 for (int j = 0; j < 10; j++)
                 {
                     if (j != 0)
-                        x += 50;
+                        x += 40;
                     Button b = new Button();
                     b.Size = new Size(height, width);
                     b.Location = new Point(x, y);
                     b.Text = "";
-                    b.BackColor = System.Drawing.Color.FromArgb(255, 30, 30, 30);
+                    b.BackColor = System.Drawing.Color.FromArgb(255, 250, 112, 112);
                     b.FlatStyle = FlatStyle.Flat;
                     b.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 200, 200, 200);
                     b.FlatAppearance.BorderSize = 1;
@@ -855,7 +855,7 @@ namespace battleship
                     EnemyArray[j, i] = b;
                     this.Controls.Add(EnemyArray[j, i]);
                 }
-                y += 50;
+                y += 40;
                 x = 1300;
             }
         }
@@ -864,7 +864,7 @@ namespace battleship
         private void signalReady()
         {
             EDEnemyButtons(false);
-            label_turn.Text = "Their Turn";
+            label_turn.Text = "Luot cua dich";
             msg m = new msg();
             m.type = "ready";
             m.body = "ready";
@@ -902,7 +902,7 @@ namespace battleship
                     }
                     else if (message.type.Equals("move"))
                     {
-                        string text = message.name + " shot at X = " + message.move.X + " Y = " + message.move.Y + Environment.NewLine;
+                        string text = message.name + " ban tai X = " + message.move.X + " Y = " + message.move.Y + Environment.NewLine;
                         txt_chatlog.Text += text;
 
                         bool check = checkHit(message.move);
@@ -923,7 +923,7 @@ namespace battleship
                         writer.Flush();
                         if (!gameover)
                         {
-                            label_turn.Text = "Your Turn";
+                            label_turn.Text = "Luot cua ban";
                             // enable th enemy grid again.
                             EDEnemyButtons(true);
                         }
@@ -938,39 +938,39 @@ namespace battleship
                     {
                         if (message.body.Equals("carrier"))
                         {
-                            txt_chatlog.Text += "Enemy carrier sunk!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy carrier da chim!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("battleship"))
                         {
-                            txt_chatlog.Text += "Enemy battleship sunk!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy battleship da chim!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("cruiser"))
                         {
-                            txt_chatlog.Text += "Enemy cruiser sunk!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy cruiser da chim!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("submarine"))
                         {
-                            txt_chatlog.Text += "Enemy submarine sunk!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy submarine da chim!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("destroyer"))
                         { 
-                            txt_chatlog.Text += "Enemy destroyer sunk!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy destroyer da chim!" + Environment.NewLine;
                         }
 
                     }
                     else if (message.type.Equals("miss"))
                     {
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.White;
-                        txt_chatlog.Text += "You missed!" + Environment.NewLine;
+                        txt_chatlog.Text += "Hut roi!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("hit"))
                     {
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
-                        txt_chatlog.Text += "You hit!" + Environment.NewLine;
+                        txt_chatlog.Text += "Trung roi!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("won"))
                     {
-                        label_turn.Text = "YOU WON!!!";
+                        label_turn.Text = "THANG ROI!!!";
                         //EDEnemyButtons(false);
                         MasterLock();
                     }
@@ -1034,7 +1034,7 @@ namespace battleship
                     }
                     else if (message.type.Equals("move"))
                     {
-                        string text = message.name + " shot at X = " + message.move.X + " Y = " + message.move.Y + Environment.NewLine;
+                        string text = message.name + " ban tai X = " + message.move.X + " Y = " + message.move.Y + Environment.NewLine;
                         txt_chatlog.Text += text;
                         bool check = checkHit(message.move);
 
@@ -1055,7 +1055,7 @@ namespace battleship
                         writer.Flush();
                         if (!gameover)
                         {
-                            label_turn.Text = "Your Turn";
+                            label_turn.Text = "Luot cua ban";
                             // enable th enemy grid again.
                             EDEnemyButtons(true);
                         }
@@ -1072,47 +1072,47 @@ namespace battleship
                     {
                         if (message.body.Equals("carrier"))
                         {
-                            txt_chatlog.Text += "Enemy carrier sunk!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy carrier da chim!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("battleship"))
                         {
-                            txt_chatlog.Text += "Enemy battleship sunk!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy battleship da chim!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("cruiser"))
                         {
-                            txt_chatlog.Text += "Enemy cruiser sunk!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy cruiser da chim!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("submarine"))
                         {
-                            txt_chatlog.Text += "Enemy submarine sunk!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy submarine da chim!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("destroyer"))
                         {
-                            txt_chatlog.Text += "Enemy destroyer sunk!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy destroyer da chim!" + Environment.NewLine;
                         }
 
                     }
                     else if (message.type.Equals("miss"))
                     {
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.White;
-                        txt_chatlog.Text += "You missed!" + Environment.NewLine;
+                        txt_chatlog.Text += "Hut roi!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("hit"))
                     {
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
-                        txt_chatlog.Text += "You hit!" + Environment.NewLine;
+                        txt_chatlog.Text += "Trung roi!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("won"))
                     {
-                        label_turn.Text = "YOU WON!!!";
+                        label_turn.Text = "THANG ROI!!!";
                         //EDEnemyButtons(false);
                         MasterLock();
                     }
                     else if (message.type.Equals("ready"))
                     {
                         EDEnemyButtons(true);
-                        label_turn.Text = "Your Turn";
-                        txt_chatlog.Text += message.name + " is ready to play." + Environment.NewLine;
+                        label_turn.Text = "Luot cua ban";
+                        txt_chatlog.Text += message.name + " da san sang." + Environment.NewLine;
                     }
                     if (writer == null)
                         break;

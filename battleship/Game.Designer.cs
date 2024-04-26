@@ -44,7 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label_turn = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            this.Load += new System.EventHandler(this.Form1_Load);
             // 
             // buttonHost
             // 
@@ -53,7 +52,7 @@
             this.buttonHost.FlatAppearance.BorderSize = 3;
             this.buttonHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHost.ForeColor = System.Drawing.Color.White;
-            this.buttonHost.Location = new System.Drawing.Point(366, 54);
+            this.buttonHost.Location = new System.Drawing.Point(310, 123);
             this.buttonHost.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHost.Name = "buttonHost";
             this.buttonHost.Size = new System.Drawing.Size(108, 37);
@@ -65,13 +64,14 @@
             // txt_Port
             // 
             this.txt_Port.BackColor = System.Drawing.Color.White;
+            this.txt_Port.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Port.ForeColor = System.Drawing.Color.Black;
-            this.txt_Port.Location = new System.Drawing.Point(161, 72);
+            this.txt_Port.Location = new System.Drawing.Point(456, 20);
             this.txt_Port.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Port.Name = "txt_Port";
             this.txt_Port.Size = new System.Drawing.Size(192, 22);
             this.txt_Port.TabIndex = 290;
-            this.txt_Port.Text = "12345";
+            this.txt_Port.Text = "357";
             // 
             // label54
             // 
@@ -79,18 +79,19 @@
             this.label54.BackColor = System.Drawing.Color.Transparent;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label54.Location = new System.Drawing.Point(11, 70);
+            this.label54.Location = new System.Drawing.Point(382, 19);
             this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(145, 25);
+            this.label54.Size = new System.Drawing.Size(70, 25);
             this.label54.TabIndex = 289;
-            this.label54.Text = "Port Number: ";
+            this.label54.Text = "Port : ";
             // 
             // txt_IP
             // 
             this.txt_IP.BackColor = System.Drawing.Color.White;
+            this.txt_IP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_IP.ForeColor = System.Drawing.Color.Black;
-            this.txt_IP.Location = new System.Drawing.Point(161, 43);
+            this.txt_IP.Location = new System.Drawing.Point(156, 22);
             this.txt_IP.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IP.Name = "txt_IP";
             this.txt_IP.Size = new System.Drawing.Size(192, 22);
@@ -104,12 +105,12 @@
             this.label53.BackColor = System.Drawing.Color.Transparent;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.White;
-            this.label53.Location = new System.Drawing.Point(28, 40);
+            this.label53.Location = new System.Drawing.Point(101, 23);
             this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(131, 25);
+            this.label53.Size = new System.Drawing.Size(51, 25);
             this.label53.TabIndex = 287;
-            this.label53.Text = "IP Address: ";
+            this.label53.Text = "IP : ";
             // 
             // btn_play
             // 
@@ -118,7 +119,7 @@
             this.btn_play.FlatAppearance.BorderSize = 3;
             this.btn_play.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_play.ForeColor = System.Drawing.Color.White;
-            this.btn_play.Location = new System.Drawing.Point(366, 11);
+            this.btn_play.Location = new System.Drawing.Point(137, 123);
             this.btn_play.Margin = new System.Windows.Forms.Padding(2);
             this.btn_play.Name = "btn_play";
             this.btn_play.Size = new System.Drawing.Size(108, 33);
@@ -130,13 +131,16 @@
             // txt_username
             // 
             this.txt_username.BackColor = System.Drawing.Color.White;
+            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.Color.Black;
-            this.txt_username.Location = new System.Drawing.Point(161, 13);
+            this.txt_username.Location = new System.Drawing.Point(158, 48);
             this.txt_username.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(192, 22);
+            this.txt_username.Size = new System.Drawing.Size(205, 49);
             this.txt_username.TabIndex = 285;
             this.txt_username.Text = "Player 1";
+            this.txt_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label43
             // 
@@ -144,12 +148,12 @@
             this.label43.BackColor = System.Drawing.Color.Transparent;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.White;
-            this.label43.Location = new System.Drawing.Point(17, 10);
+            this.label43.Location = new System.Drawing.Point(60, 57);
             this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(148, 25);
+            this.label43.Size = new System.Drawing.Size(92, 25);
             this.label43.TabIndex = 284;
-            this.label43.Text = "Player Name: ";
+            this.label43.Text = "Player : ";
             // 
             // btn_chat
             // 
@@ -158,7 +162,7 @@
             this.btn_chat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_chat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_chat.ForeColor = System.Drawing.Color.White;
-            this.btn_chat.Location = new System.Drawing.Point(307, 682);
+            this.btn_chat.Location = new System.Drawing.Point(307, 749);
             this.btn_chat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_chat.Name = "btn_chat";
             this.btn_chat.Size = new System.Drawing.Size(111, 53);
@@ -172,7 +176,7 @@
             this.txt_chat.BackColor = System.Drawing.Color.White;
             this.txt_chat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_chat.ForeColor = System.Drawing.Color.Black;
-            this.txt_chat.Location = new System.Drawing.Point(11, 680);
+            this.txt_chat.Location = new System.Drawing.Point(11, 747);
             this.txt_chat.Margin = new System.Windows.Forms.Padding(2);
             this.txt_chat.Multiline = true;
             this.txt_chat.Name = "txt_chat";
@@ -184,20 +188,20 @@
             this.label42.AutoSize = true;
             this.label42.BackColor = System.Drawing.Color.Transparent;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.White;
-            this.label42.Location = new System.Drawing.Point(136, 112);
+            this.label42.ForeColor = System.Drawing.Color.Red;
+            this.label42.Location = new System.Drawing.Point(152, 190);
             this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(167, 31);
+            this.label42.Size = new System.Drawing.Size(76, 31);
             this.label42.TabIndex = 293;
-            this.label42.Text = "Player Chat";
+            this.label42.Text = "Chat";
             // 
             // txt_chatlog
             // 
             this.txt_chatlog.BackColor = System.Drawing.Color.White;
             this.txt_chatlog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_chatlog.ForeColor = System.Drawing.Color.Black;
-            this.txt_chatlog.Location = new System.Drawing.Point(16, 156);
+            this.txt_chatlog.Location = new System.Drawing.Point(11, 223);
             this.txt_chatlog.Margin = new System.Windows.Forms.Padding(2);
             this.txt_chatlog.Multiline = true;
             this.txt_chatlog.Name = "txt_chatlog";
@@ -226,7 +230,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(980, 616);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -252,7 +256,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::battleship.Properties.Resources.beach21;
+            this.BackgroundImage = global::battleship.Properties.Resources.MainGamePic61;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1301, 807);
             this.Controls.Add(this.label_turn);
@@ -272,6 +276,7 @@
             this.Controls.Add(this.label43);
             this.Name = "InGame";
             this.Text = "Game";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
