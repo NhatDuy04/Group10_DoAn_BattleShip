@@ -82,6 +82,7 @@ namespace battleship
             // Need to set to true 
             PlacingShips = true;
             EnableMyBoard();
+
            
         }
 
@@ -694,19 +695,19 @@ namespace battleship
         }
 
         // Handles the Play button
-        private void Play(object sender, EventArgs e)
+        /*private void Play(object sender, EventArgs e)
         {
             ipAddress = txt_IP.Text;
             port = Int32.Parse(txt_Port.Text);
             label2.Text = "You Playing";
             label2.ForeColor = System.Drawing.Color.Green;
             btn_play.Enabled = false;
-            btn_host.Enabled = false;
+            buttonHost.Enabled = false;
             server = false;
             Thread t = new Thread(RunClient);
             t.Start();
             StartGame();
-        }
+        }*/
 
         // Handles the button presses on the enemy's board
         private void EnemyZoneClick(object sender, EventArgs e)
@@ -762,7 +763,7 @@ namespace battleship
         }
 
         // Handle the Chat send
-        private void ChatSend(object sender, EventArgs e)
+        private void btn_chat_Click(object sender, EventArgs e)
         {
             msg t = new msg();
             t.name = txt_username.Text;
@@ -1297,14 +1298,6 @@ namespace battleship
             return false;
         }
 
-        private void buttonHost_Click(object sender, EventArgs e)
-        {
-            Server();
-            btn_host.Enabled = false;
-            btn_play.Enabled = false;
-            StartGame();
-            EDEnemyButtons(false);
-        }
 
         private void EDEnemyButtons(bool b)
         {
@@ -1363,5 +1356,31 @@ namespace battleship
         {
 
         }
+
+        private void btn_play_Click(object sender, EventArgs e)
+        {
+                ipAddress = txt_IP.Text;
+                port = Int32.Parse(txt_Port.Text);
+                label2.Text = "You Playing";
+                label2.ForeColor = System.Drawing.Color.Green;
+                btn_play.Enabled = false;
+                buttonHost.Enabled = false;
+                server = false;
+                Thread t = new Thread(RunClient);
+                t.Start();
+                StartGame();
+            
+        }
+
+        private void buttonHost_Click_1(object sender, EventArgs e)
+        {
+            Server();
+            buttonHost.Enabled = false;
+            btn_play.Enabled = false;
+            StartGame();
+            EDEnemyButtons(false);
+        }
+
+
     }
 }

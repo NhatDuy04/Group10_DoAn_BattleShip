@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_host = new System.Windows.Forms.Button();
+            this.buttonHost = new System.Windows.Forms.Button();
             this.txt_Port = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.txt_IP = new System.Windows.Forms.TextBox();
@@ -44,21 +44,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label_turn = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            this.Load += new System.EventHandler(this.Form1_Load);
             // 
-            // btn_host
+            // buttonHost
             // 
-            this.btn_host.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.btn_host.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.btn_host.FlatAppearance.BorderSize = 3;
-            this.btn_host.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_host.ForeColor = System.Drawing.Color.White;
-            this.btn_host.Location = new System.Drawing.Point(366, 54);
-            this.btn_host.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_host.Name = "btn_host";
-            this.btn_host.Size = new System.Drawing.Size(108, 37);
-            this.btn_host.TabIndex = 291;
-            this.btn_host.Text = "HOST";
-            this.btn_host.UseVisualStyleBackColor = false;
+            this.buttonHost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.buttonHost.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.buttonHost.FlatAppearance.BorderSize = 3;
+            this.buttonHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHost.ForeColor = System.Drawing.Color.White;
+            this.buttonHost.Location = new System.Drawing.Point(366, 54);
+            this.buttonHost.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHost.Name = "buttonHost";
+            this.buttonHost.Size = new System.Drawing.Size(108, 37);
+            this.buttonHost.TabIndex = 291;
+            this.buttonHost.Text = "HOST";
+            this.buttonHost.UseVisualStyleBackColor = false;
+            this.buttonHost.Click += new System.EventHandler(this.buttonHost_Click_1);
             // 
             // txt_Port
             // 
@@ -123,6 +125,7 @@
             this.btn_play.TabIndex = 286;
             this.btn_play.Text = "PLAY";
             this.btn_play.UseVisualStyleBackColor = false;
+            this.btn_play.Click += new System.EventHandler(this.btn_play_Click);
             // 
             // txt_username
             // 
@@ -162,6 +165,7 @@
             this.btn_chat.TabIndex = 295;
             this.btn_chat.Text = "Send";
             this.btn_chat.UseVisualStyleBackColor = false;
+            this.btn_chat.Click += new System.EventHandler(this.btn_chat_Click);
             // 
             // txt_chat
             // 
@@ -258,7 +262,7 @@
             this.Controls.Add(this.txt_chat);
             this.Controls.Add(this.label42);
             this.Controls.Add(this.txt_chatlog);
-            this.Controls.Add(this.btn_host);
+            this.Controls.Add(this.buttonHost);
             this.Controls.Add(this.txt_Port);
             this.Controls.Add(this.label54);
             this.Controls.Add(this.txt_IP);
@@ -275,7 +279,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_host;
+        private System.Windows.Forms.Button buttonHost;
         private System.Windows.Forms.TextBox txt_Port;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.TextBox txt_IP;
