@@ -150,7 +150,7 @@ namespace battleship
                     EnableMyBoard();
                 }
             }
-            else if (!SubmarinePlaced)
+            /*else if (!SubmarinePlaced)
             {
                 if (PlacingFirstClick)
                 {
@@ -189,9 +189,9 @@ namespace battleship
                     DestroyerPlaced = true;
                     EnableMyBoard();
                 }
-            }
+            }*/
 
-            if (CarrierPlaced && BattleshipPlaced && CruiserPlaced && SubmarinePlaced && DestroyerPlaced)
+            if (CarrierPlaced && BattleshipPlaced && CruiserPlaced /*&& SubmarinePlaced && DestroyerPlaced*/)
             {
                 DisableMyBoard();
                 playerFleet.Carrier = Carrier;
@@ -288,10 +288,10 @@ namespace battleship
                 Battleship = temp;
             else if (name.Equals("Cruiser"))
                 Cruiser = temp;
-            else if (name.Equals("Submarine"))
+            /*else if (name.Equals("Submarine"))
                 Submarine = temp;
             else if (name.Equals("Destroyer"))
-                Destroyer = temp;
+                Destroyer = temp;*/
 
             else
             {
@@ -546,7 +546,7 @@ namespace battleship
                     }
                 }
             }
-            else if (ship.Equals("Submarine"))
+            /*else if (ship.Equals("Submarine"))
             {
                 // Size 3
                 //Check left
@@ -659,7 +659,7 @@ namespace battleship
                         PlayerArray[c.X, c.Y + 1].FlatAppearance.BorderColor = System.Drawing.Color.Green;
                     }
                 }
-            }
+            }*/
 
         }
 
@@ -1157,8 +1157,8 @@ namespace battleship
             writer.Flush();
 
             if (playerFleet.CarrierSunk == true && playerFleet.BattleshipSunk == true
-                && playerFleet.CruiserSunk == true && playerFleet.SubmarineSunk == true
-                && playerFleet.DestroyerSunk == true)
+                && playerFleet.CruiserSunk == true /*&& playerFleet.SubmarineSunk == true
+                && playerFleet.DestroyerSunk == true*/)
             {
                 msg w = new msg();
                 w.type = "won";
@@ -1253,7 +1253,7 @@ namespace battleship
                 }
             }
             // Check submarine
-            for (int i = 0; i < 3; i++)
+           /* for (int i = 0; i < 3; i++)
             {
                 if (Submarine[i].X == c.X && Submarine[i].Y == c.Y)
                 {
@@ -1293,7 +1293,7 @@ namespace battleship
                     }
                     return true;
                 }
-            }
+            }*/
 
             return false;
         }
