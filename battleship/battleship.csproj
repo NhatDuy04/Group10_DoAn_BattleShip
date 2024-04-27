@@ -34,8 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -71,8 +71,20 @@
     <Compile Include="GameMenu.Designer.cs">
       <DependentUpon>GameMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lose.Designer.cs">
+      <DependentUpon>Lose.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Win.Designer.cs">
+      <DependentUpon>Win.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Credit.resx">
       <DependentUpon>Credit.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GameMenu.resx">
       <DependentUpon>GameMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lose.resx">
+      <DependentUpon>Lose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,6 +107,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Win.resx">
+      <DependentUpon>Win.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +135,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\034368fc1b67bbcf89c24663218790a8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

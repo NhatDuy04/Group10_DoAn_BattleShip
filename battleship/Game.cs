@@ -231,8 +231,8 @@ namespace battleship
                 {
                     PlayerZones[j, head.Y] = true;
                     PlayerArray[j, head.Y].Enabled = false;
-                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Green;
-                    PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     Coord t = new Coord(j, head.Y);
                     temp[k] = t;
                     k++;
@@ -245,8 +245,8 @@ namespace battleship
                 {
                     PlayerZones[j, head.Y] = true;
                     PlayerArray[j, head.Y].Enabled = false;
-                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Green;
-                    PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     Coord t = new Coord(j, head.Y);
                     temp[k] = t;
                     k++;
@@ -259,8 +259,8 @@ namespace battleship
                 {
                     PlayerZones[head.X, i] = true;
                     PlayerArray[head.X, i].Enabled = false;
-                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Green;
-                    PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     Coord t = new Coord(head.X, i);
                     temp[k] = t;
                     k++;
@@ -273,8 +273,8 @@ namespace battleship
                 {
                     PlayerZones[head.X, i] = true;
                     PlayerArray[head.X, i].Enabled = false;
-                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Green;
-                    PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     Coord t = new Coord(head.X, i);
                     temp[k] = t;
                     k++;
@@ -304,22 +304,22 @@ namespace battleship
         {
             if (up)
             {
-                PlayerArray[head.X, head.Y - size].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 200, 200, 200);
+                PlayerArray[head.X, head.Y - size].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 122, 204);
                 up = false;
             }
             if (down)
             {
-                PlayerArray[head.X, head.Y + size].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 200, 200, 200);
+                PlayerArray[head.X, head.Y + size].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 122, 204);
                 down = false;
             }
             if (left)
             {
-                PlayerArray[head.X - size, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 200, 200, 200);
+                PlayerArray[head.X - size, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 122, 204);
                 left = false;
             }
             if (right)
             {
-                PlayerArray[head.X + size, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 200, 200, 200);
+                PlayerArray[head.X + size, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 122, 204);
                 right = false;
             }
 
@@ -332,8 +332,8 @@ namespace battleship
                 {
                     PlayerZones[j, head.Y] = true;
                     PlayerArray[j, head.Y].Enabled = false;
-                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Green;
-                    PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                 }
             }
             else if (tail.X > head.X)
@@ -343,8 +343,8 @@ namespace battleship
                 {
                     PlayerZones[j, head.Y] = true;
                     PlayerArray[j, head.Y].Enabled = false;
-                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Green;
-                    PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                 }
             }
             else if (tail.Y < head.Y)
@@ -354,8 +354,8 @@ namespace battleship
                 {
                     PlayerZones[head.X, i] = true;
                     PlayerArray[head.X, i].Enabled = false;
-                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Green;
-                    PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                 }
             }
             else if (tail.Y > head.Y)
@@ -365,8 +365,8 @@ namespace battleship
                 {
                     PlayerZones[head.X, i] = true;
                     PlayerArray[head.X, i].Enabled = false;
-                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Green;
-                    PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                 }
 
             }
@@ -387,8 +387,8 @@ namespace battleship
                         left = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X - 4, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X - 4, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X - 4, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -401,8 +401,8 @@ namespace battleship
                         right = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X + 4, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X + 4, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X + 4, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -414,8 +414,8 @@ namespace battleship
                         up = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X, c.Y - 4].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X, c.Y - 4].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X, c.Y - 4].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -427,8 +427,8 @@ namespace battleship
                         down = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X, c.Y + 4].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X, c.Y + 4].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X, c.Y + 4].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
             }
@@ -444,8 +444,8 @@ namespace battleship
                         left = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X - 3, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X - 3, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X - 3, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -458,8 +458,8 @@ namespace battleship
                         right = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X + 3, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X + 3, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X + 3, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -471,8 +471,8 @@ namespace battleship
                         up = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X, c.Y - 3].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X, c.Y - 3].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X, c.Y - 3].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -484,8 +484,8 @@ namespace battleship
                         down = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X, c.Y + 3].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X, c.Y + 3].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X, c.Y + 3].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
             }
@@ -501,8 +501,8 @@ namespace battleship
                         left = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X - 2, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X - 2, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X - 2, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -515,8 +515,8 @@ namespace battleship
                         right = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X + 2, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X + 2, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X + 2, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -528,8 +528,8 @@ namespace battleship
                         up = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X, c.Y - 2].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X, c.Y - 2].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X, c.Y - 2].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -541,8 +541,8 @@ namespace battleship
                         down = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X, c.Y + 2].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X, c.Y + 2].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X, c.Y + 2].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
             }
@@ -558,8 +558,8 @@ namespace battleship
                         left = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X - 2, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X - 2, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X - 2, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -572,8 +572,8 @@ namespace battleship
                         right = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X + 2, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X + 2, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X + 2, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -585,8 +585,8 @@ namespace battleship
                         up = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X, c.Y - 2].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X, c.Y - 2].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X, c.Y - 2].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -598,8 +598,8 @@ namespace battleship
                         down = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X, c.Y + 2].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X, c.Y + 2].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X, c.Y + 2].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
             }
@@ -615,8 +615,8 @@ namespace battleship
                         left = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X - 1, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X - 1, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X - 1, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -629,8 +629,8 @@ namespace battleship
                         right = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X + 1, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X + 1, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X + 1, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -642,8 +642,8 @@ namespace battleship
                         up = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X, c.Y - 1].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X, c.Y - 1].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X, c.Y - 1].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
 
@@ -655,8 +655,8 @@ namespace battleship
                         down = true;
                         PlayerArray[c.X, c.Y].Enabled = true;
                         PlayerArray[c.X, c.Y + 1].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
-                        PlayerArray[c.X, c.Y + 1].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+                        PlayerArray[c.X, c.Y + 1].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     }
                 }
             }*/
@@ -672,7 +672,7 @@ namespace battleship
                 for (int j = 0; j < 10; j++)
                 {
                     PlayerArray[i, j].Enabled = false;
-                    //PlayerArray[i, j].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 200, 200, 200);
+                    //PlayerArray[i, j].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 122, 204);
                 }
             }
         }
@@ -699,8 +699,8 @@ namespace battleship
         {
             ipAddress = txt_IP.Text;
             port = Int32.Parse(txt_Port.Text);
-            label2.Text = "You Playing";
-            label2.ForeColor = System.Drawing.Color.Green;
+            label2.Text = "Bạn đang chơi";
+            label2.ForeColor = System.Drawing.Color.Blue;
             btn_play.Enabled = false;
             buttonHost.Enabled = false;
             server = false;
@@ -723,7 +723,7 @@ namespace battleship
             EnemyZones[x, y] = true;
             EnemyArray[x, y].Enabled = false;
             EDEnemyButtons(false);
-            label_turn.Text = "Luot cua dich";
+            label_turn.Text = "Lượt của địch";
             Coord newcoord = new Coord(x, y);
             Shoot(newcoord);
         }
@@ -864,7 +864,7 @@ namespace battleship
         private void signalReady()
         {
             EDEnemyButtons(false);
-            label_turn.Text = "Luot cua dich";
+            label_turn.Text = "Lượt của địch";
             msg m = new msg();
             m.type = "ready";
             m.body = "ready";
@@ -902,7 +902,7 @@ namespace battleship
                     }
                     else if (message.type.Equals("move"))
                     {
-                        string text = message.name + " ban tai X = " + message.move.X + " Y = " + message.move.Y + Environment.NewLine;
+                        string text = message.name + " Đã bắn tại X = " + message.move.X + " Y = " + message.move.Y + Environment.NewLine;
                         txt_chatlog.Text += text;
 
                         bool check = checkHit(message.move);
@@ -923,14 +923,14 @@ namespace battleship
                         writer.Flush();
                         if (!gameover)
                         {
-                            label_turn.Text = "Luot cua ban";
+                            label_turn.Text = "Lượt của bạn";
                             // enable th enemy grid again.
                             EDEnemyButtons(true);
                         }
                     }
                     else if (message.type.Equals("quit"))
                     {
-                        string text = message.name + " quits... " + Environment.NewLine;
+                        string text = message.name + " thoát... " + Environment.NewLine;
                         ServerDisco();
                         break;
                     }
@@ -938,41 +938,43 @@ namespace battleship
                     {
                         if (message.body.Equals("carrier"))
                         {
-                            txt_chatlog.Text += "Enemy carrier da chim!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy carrier đã bị bắn chìm!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("battleship"))
                         {
-                            txt_chatlog.Text += "Enemy battleship da chim!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy battleship đã bị bắn chìm!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("cruiser"))
                         {
-                            txt_chatlog.Text += "Enemy cruiser da chim!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy cruiser đã bị bắn chìm!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("submarine"))
                         {
-                            txt_chatlog.Text += "Enemy submarine da chim!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy submarine đã bị bắn chìm!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("destroyer"))
                         { 
-                            txt_chatlog.Text += "Enemy destroyer da chim!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy destroyer đã bị bắn chìm!" + Environment.NewLine;
                         }
 
                     }
                     else if (message.type.Equals("miss"))
                     {
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.White;
-                        txt_chatlog.Text += "Hut roi!" + Environment.NewLine;
+                        txt_chatlog.Text += "Bắn trượt!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("hit"))
                     {
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
-                        txt_chatlog.Text += "Trung roi!" + Environment.NewLine;
+                        txt_chatlog.Text += "Bắn trúng!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("won"))
                     {
-                        label_turn.Text = "THANG ROI!!!";
+                        label_turn.Text = "BẠN ĐÃ THẮNG";
+                        Win w = new Win();
+                        w.ShowDialog();
                         //EDEnemyButtons(false);
-                        MasterLock();
+                        //MasterLock();
                     }
                     else if (message.type.Equals("ready"))
                     {
@@ -1034,7 +1036,7 @@ namespace battleship
                     }
                     else if (message.type.Equals("move"))
                     {
-                        string text = message.name + " ban tai X = " + message.move.X + " Y = " + message.move.Y + Environment.NewLine;
+                        string text = message.name + " Đã bắn tại X = " + message.move.X + " Y = " + message.move.Y + Environment.NewLine;
                         txt_chatlog.Text += text;
                         bool check = checkHit(message.move);
 
@@ -1055,7 +1057,7 @@ namespace battleship
                         writer.Flush();
                         if (!gameover)
                         {
-                            label_turn.Text = "Luot cua ban";
+                            label_turn.Text = "Lượt của bạn";
                             // enable th enemy grid again.
                             EDEnemyButtons(true);
                         }
@@ -1064,7 +1066,7 @@ namespace battleship
                     }
                     else if (message.type.Equals("quit"))
                     {
-                        string text = message.name + " quits... " + Environment.NewLine;
+                        string text = message.name + " thoát... " + Environment.NewLine;
                         ServerDisco();
                         break;
                     }
@@ -1072,47 +1074,49 @@ namespace battleship
                     {
                         if (message.body.Equals("carrier"))
                         {
-                            txt_chatlog.Text += "Enemy carrier da chim!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy carrier đã bị bắn chìm!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("battleship"))
                         {
-                            txt_chatlog.Text += "Enemy battleship da chim!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy battleship đã bị bắn chìm!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("cruiser"))
                         {
-                            txt_chatlog.Text += "Enemy cruiser da chim!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy cruiser đã bị bắn chìm!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("submarine"))
                         {
-                            txt_chatlog.Text += "Enemy submarine da chim!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy submarine đã bị bắn chìm!" + Environment.NewLine;
                         }
                         else if (message.body.Equals("destroyer"))
                         {
-                            txt_chatlog.Text += "Enemy destroyer da chim!" + Environment.NewLine;
+                            txt_chatlog.Text += "Enemy destroyer đã bị bắn chìm!" + Environment.NewLine;
                         }
 
                     }
                     else if (message.type.Equals("miss"))
                     {
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.White;
-                        txt_chatlog.Text += "Hut roi!" + Environment.NewLine;
+                        txt_chatlog.Text += "Bắn trượt!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("hit"))
                     {
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
-                        txt_chatlog.Text += "Trung roi!" + Environment.NewLine;
+                        txt_chatlog.Text += "Bắn trúng!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("won"))
                     {
-                        label_turn.Text = "THANG ROI!!!";
+                        label_turn.Text = "BẠN ĐÃ THẮNG";
+                        Win w = new Win();
+                        w.ShowDialog();
                         //EDEnemyButtons(false);
-                        MasterLock();
+                        //MasterLock();
                     }
                     else if (message.type.Equals("ready"))
                     {
                         EDEnemyButtons(true);
-                        label_turn.Text = "Luot cua ban";
-                        txt_chatlog.Text += message.name + " da san sang." + Environment.NewLine;
+                        label_turn.Text = "Lượt của bạn";
+                        txt_chatlog.Text += message.name + " đã sẵn sàng." + Environment.NewLine;
                     }
                     if (writer == null)
                         break;
@@ -1168,7 +1172,9 @@ namespace battleship
                 string outputWin = JsonConvert.SerializeObject(w);
                 writer.WriteLine(outputWin);
                 writer.Flush();
-                label_turn.Text = "You Lost.";
+                //label_turn.Text = "Mất lượt.";
+                Lose l = new Lose();
+                l.ShowDialog();
                 gameover = true;
                 MasterLock();
             }
@@ -1362,7 +1368,7 @@ namespace battleship
                 ipAddress = txt_IP.Text;
                 port = Int32.Parse(txt_Port.Text);
                 label2.Text = "You Playing";
-                label2.ForeColor = System.Drawing.Color.Green;
+                label2.ForeColor = System.Drawing.Color.Blue;
                 btn_play.Enabled = false;
                 buttonHost.Enabled = false;
                 server = false;

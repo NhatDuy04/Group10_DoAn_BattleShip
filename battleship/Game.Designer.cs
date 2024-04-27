@@ -52,65 +52,69 @@
             this.buttonHost.FlatAppearance.BorderSize = 3;
             this.buttonHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHost.ForeColor = System.Drawing.Color.White;
-            this.buttonHost.Location = new System.Drawing.Point(310, 123);
+            this.buttonHost.Location = new System.Drawing.Point(345, 127);
             this.buttonHost.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHost.Name = "buttonHost";
-            this.buttonHost.Size = new System.Drawing.Size(108, 37);
+            this.buttonHost.Size = new System.Drawing.Size(122, 41);
             this.buttonHost.TabIndex = 291;
-            this.buttonHost.Text = "HOST";
+            this.buttonHost.Text = "MÁY CHỦ";
             this.buttonHost.UseVisualStyleBackColor = false;
             this.buttonHost.Click += new System.EventHandler(this.buttonHost_Click_1);
             // 
             // txt_Port
             // 
             this.txt_Port.BackColor = System.Drawing.Color.White;
-            this.txt_Port.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Port.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Port.ForeColor = System.Drawing.Color.Black;
-            this.txt_Port.Location = new System.Drawing.Point(456, 20);
+            this.txt_Port.Location = new System.Drawing.Point(176, 153);
             this.txt_Port.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Port.Multiline = true;
             this.txt_Port.Name = "txt_Port";
-            this.txt_Port.Size = new System.Drawing.Size(192, 22);
+            this.txt_Port.Size = new System.Drawing.Size(129, 36);
             this.txt_Port.TabIndex = 290;
             this.txt_Port.Text = "357";
+            this.txt_Port.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label54
             // 
-            this.label54.AutoSize = true;
             this.label54.BackColor = System.Drawing.Color.Transparent;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label54.Location = new System.Drawing.Point(382, 19);
+            this.label54.Location = new System.Drawing.Point(30, 153);
             this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(70, 25);
+            this.label54.Size = new System.Drawing.Size(122, 36);
             this.label54.TabIndex = 289;
-            this.label54.Text = "Port : ";
+            this.label54.Text = "Cổng:";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txt_IP
             // 
             this.txt_IP.BackColor = System.Drawing.Color.White;
-            this.txt_IP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_IP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_IP.ForeColor = System.Drawing.Color.Black;
-            this.txt_IP.Location = new System.Drawing.Point(156, 22);
+            this.txt_IP.Location = new System.Drawing.Point(176, 28);
             this.txt_IP.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IP.Multiline = true;
             this.txt_IP.Name = "txt_IP";
-            this.txt_IP.Size = new System.Drawing.Size(192, 22);
+            this.txt_IP.Size = new System.Drawing.Size(129, 36);
             this.txt_IP.TabIndex = 288;
             this.txt_IP.Text = "127.0.0.1";
+            this.txt_IP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_IP.TextChanged += new System.EventHandler(this.txt_IP_TextChanged);
             // 
             // label53
             // 
-            this.label53.AutoSize = true;
             this.label53.BackColor = System.Drawing.Color.Transparent;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.White;
-            this.label53.Location = new System.Drawing.Point(101, 23);
+            this.label53.Location = new System.Drawing.Point(30, 28);
             this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(51, 25);
+            this.label53.Size = new System.Drawing.Size(122, 36);
             this.label53.TabIndex = 287;
             this.label53.Text = "IP : ";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btn_play
             // 
@@ -119,41 +123,41 @@
             this.btn_play.FlatAppearance.BorderSize = 3;
             this.btn_play.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_play.ForeColor = System.Drawing.Color.White;
-            this.btn_play.Location = new System.Drawing.Point(137, 123);
+            this.btn_play.Location = new System.Drawing.Point(345, 59);
             this.btn_play.Margin = new System.Windows.Forms.Padding(2);
             this.btn_play.Name = "btn_play";
-            this.btn_play.Size = new System.Drawing.Size(108, 33);
+            this.btn_play.Size = new System.Drawing.Size(122, 41);
             this.btn_play.TabIndex = 286;
-            this.btn_play.Text = "PLAY";
+            this.btn_play.Text = "CHƠI";
             this.btn_play.UseVisualStyleBackColor = false;
             this.btn_play.Click += new System.EventHandler(this.btn_play_Click);
             // 
             // txt_username
             // 
             this.txt_username.BackColor = System.Drawing.Color.White;
-            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.Color.Black;
-            this.txt_username.Location = new System.Drawing.Point(158, 48);
+            this.txt_username.Location = new System.Drawing.Point(176, 91);
             this.txt_username.Margin = new System.Windows.Forms.Padding(2);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(205, 49);
+            this.txt_username.Size = new System.Drawing.Size(129, 36);
             this.txt_username.TabIndex = 285;
             this.txt_username.Text = "Player 1";
             this.txt_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label43
             // 
-            this.label43.AutoSize = true;
             this.label43.BackColor = System.Drawing.Color.Transparent;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.White;
-            this.label43.Location = new System.Drawing.Point(60, 57);
+            this.label43.Location = new System.Drawing.Point(30, 91);
             this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(92, 25);
+            this.label43.Size = new System.Drawing.Size(122, 36);
             this.label43.TabIndex = 284;
-            this.label43.Text = "Player : ";
+            this.label43.Text = "Tên:";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btn_chat
             // 
@@ -162,12 +166,12 @@
             this.btn_chat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_chat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_chat.ForeColor = System.Drawing.Color.White;
-            this.btn_chat.Location = new System.Drawing.Point(307, 749);
+            this.btn_chat.Location = new System.Drawing.Point(345, 920);
             this.btn_chat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_chat.Name = "btn_chat";
-            this.btn_chat.Size = new System.Drawing.Size(111, 53);
+            this.btn_chat.Size = new System.Drawing.Size(125, 66);
             this.btn_chat.TabIndex = 295;
-            this.btn_chat.Text = "Send";
+            this.btn_chat.Text = "GỬI";
             this.btn_chat.UseVisualStyleBackColor = false;
             this.btn_chat.Click += new System.EventHandler(this.btn_chat_Click);
             // 
@@ -176,38 +180,38 @@
             this.txt_chat.BackColor = System.Drawing.Color.White;
             this.txt_chat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_chat.ForeColor = System.Drawing.Color.Black;
-            this.txt_chat.Location = new System.Drawing.Point(11, 747);
+            this.txt_chat.Location = new System.Drawing.Point(12, 918);
             this.txt_chat.Margin = new System.Windows.Forms.Padding(2);
             this.txt_chat.Multiline = true;
             this.txt_chat.Name = "txt_chat";
-            this.txt_chat.Size = new System.Drawing.Size(292, 55);
+            this.txt_chat.Size = new System.Drawing.Size(328, 68);
             this.txt_chat.TabIndex = 294;
             // 
             // label42
             // 
-            this.label42.AutoSize = true;
             this.label42.BackColor = System.Drawing.Color.Transparent;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.Red;
-            this.label42.Location = new System.Drawing.Point(152, 190);
+            this.label42.Location = new System.Drawing.Point(72, 205);
             this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(76, 31);
+            this.label42.Size = new System.Drawing.Size(343, 46);
             this.label42.TabIndex = 293;
-            this.label42.Text = "Chat";
+            this.label42.Text = "Cuộc trò chuyện";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txt_chatlog
             // 
             this.txt_chatlog.BackColor = System.Drawing.Color.White;
             this.txt_chatlog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_chatlog.ForeColor = System.Drawing.Color.Black;
-            this.txt_chatlog.Location = new System.Drawing.Point(11, 223);
+            this.txt_chatlog.Location = new System.Drawing.Point(12, 253);
             this.txt_chatlog.Margin = new System.Windows.Forms.Padding(2);
             this.txt_chatlog.Multiline = true;
             this.txt_chatlog.Name = "txt_chatlog";
             this.txt_chatlog.ReadOnly = true;
             this.txt_chatlog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_chatlog.Size = new System.Drawing.Size(407, 520);
+            this.txt_chatlog.Size = new System.Drawing.Size(457, 649);
             this.txt_chatlog.TabIndex = 292;
             this.txt_chatlog.TabStop = false;
             // 
@@ -216,12 +220,12 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(472, 200);
+            this.label2.Location = new System.Drawing.Point(531, 250);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 94);
+            this.label2.Size = new System.Drawing.Size(146, 118);
             this.label2.TabIndex = 299;
-            this.label2.Text = "You";
+            this.label2.Text = "Bạn";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -231,12 +235,12 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(980, 616);
+            this.label3.Location = new System.Drawing.Point(1102, 770);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 32);
+            this.label3.Size = new System.Drawing.Size(127, 38);
             this.label3.TabIndex = 300;
-            this.label3.Text = "Opponent";
+            this.label3.Text = "Đối thủ";
             // 
             // label_turn
             // 
@@ -244,21 +248,21 @@
             this.label_turn.BackColor = System.Drawing.Color.Transparent;
             this.label_turn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_turn.ForeColor = System.Drawing.Color.White;
-            this.label_turn.Location = new System.Drawing.Point(491, 616);
+            this.label_turn.Location = new System.Drawing.Point(552, 770);
             this.label_turn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_turn.Name = "label_turn";
-            this.label_turn.Size = new System.Drawing.Size(93, 32);
+            this.label_turn.Size = new System.Drawing.Size(168, 38);
             this.label_turn.TabIndex = 301;
-            this.label_turn.Text = "Turn: ";
+            this.label_turn.Text = "Lượt chơi:";
             // 
             // InGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::battleship.Properties.Resources.MainGamePic61;
+            this.BackgroundImage = global::battleship.Properties.Resources.credit21;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1301, 807);
+            this.ClientSize = new System.Drawing.Size(1464, 1009);
             this.Controls.Add(this.label_turn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -274,6 +278,7 @@
             this.Controls.Add(this.btn_play);
             this.Controls.Add(this.txt_username);
             this.Controls.Add(this.label43);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "InGame";
             this.Text = "Game";
             this.Load += new System.EventHandler(this.Form1_Load);
