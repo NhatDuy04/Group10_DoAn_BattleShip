@@ -22,26 +22,20 @@ namespace battleship
         public Coord[] Carrier;
         public Coord[] Battleship;
         public Coord[] Cruiser;
-        public Coord[] Submarine;
-        public Coord[] Destroyer;
         public bool CarrierSunk;
         public bool BattleshipSunk;
         public bool CruiserSunk;
-        public bool SubmarineSunk;
-        public bool DestroyerSunk;
+        
 
         public Fleet(Coord[] car, Coord[] bat, Coord[] cru, Coord[] sub, Coord[] des)
         {
             Carrier = car;
             Battleship = bat;
             Cruiser = cru;
-            Submarine = sub;
-            Destroyer = des;
             CarrierSunk = false;
             BattleshipSunk = false;
             CruiserSunk = false;
-            SubmarineSunk = false;
-            DestroyerSunk = false;
+            
         }
 
         
