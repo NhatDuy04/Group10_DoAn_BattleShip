@@ -624,6 +624,7 @@ namespace battleship
         {
             int width = 35;
             int height = 35;
+
             int x = 694;
             int y = 14;
             for (int i = 0; i < 10; i++)
@@ -971,8 +972,7 @@ namespace battleship
             writer.Flush();
 
             if (playerFleet.CarrierSunk == true && playerFleet.BattleshipSunk == true
-                && playerFleet.CruiserSunk == true /*&& playerFleet.SubmarineSunk == true
-                && playerFleet.DestroyerSunk == true*/)
+                && playerFleet.CruiserSunk == true)
             {
                 msg w = new msg();
                 w.type = "won";
@@ -982,7 +982,7 @@ namespace battleship
                 string outputWin = JsonConvert.SerializeObject(w);
                 writer.WriteLine(outputWin);
                 writer.Flush();
-                //label_turn.Text = "Mất lượt.";
+                
                 Lose l = new Lose();
                 l.ShowDialog();
                 gameover = true;
