@@ -150,48 +150,9 @@ namespace battleship
                     EnableMyBoard();
                 }
             }
-            /*else if (!SubmarinePlaced)
-            {
-                if (PlacingFirstClick)
-                {
-                    // Set the head equal to the coord
-                    PlacingFirstClick = false;
-                    head = c;
-                    DisableMyBoard();
-                    PathEnable("Submarine", head);
-                }
-                else
-                {
-                    tail = c;
-                    ShipPOS(3, "Submarine");
-                    DrawShip(2);
-                    PlacingFirstClick = true;
-                    SubmarinePlaced = true;
-                    EnableMyBoard();
-                }
-            }
-            else if (!DestroyerPlaced)
-            {
-                if (PlacingFirstClick)
-                {
-                    // Set the head equal to the coord
-                    PlacingFirstClick = false;
-                    head = c;
-                    DisableMyBoard();
-                    PathEnable("Destroyer", head);
-                }
-                else
-                {
-                    tail = c;
-                    ShipPOS(2, "Destroyer");
-                    DrawShip(1);
-                    PlacingFirstClick = true;
-                    DestroyerPlaced = true;
-                    EnableMyBoard();
-                }
-            }*/
+           
 
-            if (CarrierPlaced && BattleshipPlaced && CruiserPlaced /*&& SubmarinePlaced && DestroyerPlaced*/)
+            if (CarrierPlaced && BattleshipPlaced && CruiserPlaced)
             {
                 DisableMyBoard();
                 playerFleet.Carrier = Carrier;
@@ -288,10 +249,7 @@ namespace battleship
                 Battleship = temp;
             else if (name.Equals("Cruiser"))
                 Cruiser = temp;
-            /*else if (name.Equals("Submarine"))
-                Submarine = temp;
-            else if (name.Equals("Destroyer"))
-                Destroyer = temp;*/
+            
 
             else
             {
@@ -546,120 +504,6 @@ namespace battleship
                     }
                 }
             }
-            /*else if (ship.Equals("Submarine"))
-            {
-                // Size 3
-                //Check left
-                if (c.X - 2 >= 0)
-                {
-                    // Check left
-                    if (PlayerZones[c.X - 1, c.Y] == false && PlayerZones[c.X - 2, c.Y] == false)
-                    {
-                        left = true;
-                        PlayerArray[c.X, c.Y].Enabled = true;
-                        PlayerArray[c.X - 2, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                        PlayerArray[c.X - 2, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    }
-                }
-
-                // Check Right
-                if (c.X + 2 <= 9)
-                {
-                    // Check left
-                    if (PlayerZones[c.X + 1, c.Y] == false && PlayerZones[c.X + 2, c.Y] == false)
-                    {
-                        right = true;
-                        PlayerArray[c.X, c.Y].Enabled = true;
-                        PlayerArray[c.X + 2, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                        PlayerArray[c.X + 2, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    }
-                }
-
-                // Check Up
-                if (c.Y - 2 >= 0)
-                {
-                    if (PlayerZones[c.X, c.Y - 1] == false && PlayerZones[c.X, c.Y - 2] == false)
-                    {
-                        up = true;
-                        PlayerArray[c.X, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y - 2].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                        PlayerArray[c.X, c.Y - 2].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    }
-                }
-
-                // Check Down
-                if (c.Y + 2 <= 9)
-                {
-                    if (PlayerZones[c.X, c.Y + 1] == false && PlayerZones[c.X, c.Y + 2] == false)
-                    {
-                        down = true;
-                        PlayerArray[c.X, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y + 2].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                        PlayerArray[c.X, c.Y + 2].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    }
-                }
-            }
-            else if (ship.Equals("Destroyer"))
-            {
-                // Size 2
-                //Check left
-                if (c.X - 1 >= 0)
-                {
-                    // Check left
-                    if (PlayerZones[c.X - 1, c.Y] == false)
-                    {
-                        left = true;
-                        PlayerArray[c.X, c.Y].Enabled = true;
-                        PlayerArray[c.X - 1, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                        PlayerArray[c.X - 1, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    }
-                }
-
-                // Check Right
-                if (c.X + 1 <= 9)
-                {
-                    // Check left
-                    if (PlayerZones[c.X + 1, c.Y] == false)
-                    {
-                        right = true;
-                        PlayerArray[c.X, c.Y].Enabled = true;
-                        PlayerArray[c.X + 1, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                        PlayerArray[c.X + 1, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    }
-                }
-
-                // Check Up
-                if (c.Y - 1 >= 0)
-                {
-                    if (PlayerZones[c.X, c.Y - 1] == false)
-                    {
-                        up = true;
-                        PlayerArray[c.X, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y - 1].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                        PlayerArray[c.X, c.Y - 1].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    }
-                }
-
-                // Check Down
-                if (c.Y + 1 <= 9)
-                {
-                    if (PlayerZones[c.X, c.Y + 1] == false)
-                    {
-                        down = true;
-                        PlayerArray[c.X, c.Y].Enabled = true;
-                        PlayerArray[c.X, c.Y + 1].Enabled = true;
-                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                        PlayerArray[c.X, c.Y + 1].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    }
-                }
-            }*/
 
         }
 
@@ -672,7 +516,7 @@ namespace battleship
                 for (int j = 0; j < 10; j++)
                 {
                     PlayerArray[i, j].Enabled = false;
-                    //PlayerArray[i, j].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 122, 204);
+                    
                 }
             }
         }
@@ -694,22 +538,7 @@ namespace battleship
             }
         }
 
-        // Handles the Play button
-        /*private void Play(object sender, EventArgs e)
-        {
-            ipAddress = txt_IP.Text;
-            port = Int32.Parse(txt_Port.Text);
-            label2.Text = "Bạn đang chơi";
-            label2.ForeColor = System.Drawing.Color.Blue;
-            btn_play.Enabled = false;
-            buttonHost.Enabled = false;
-            server = false;
-            Thread t = new Thread(RunClient);
-            t.Start();
-            StartGame();
-        }*/
-
-        // Handles the button presses on the enemy's board
+        
         private void EnemyZoneClick(object sender, EventArgs e)
         {
             // All button names for the enemy are "buttonX(letter)(number)" format, extract the letter and number from the name
@@ -948,14 +777,7 @@ namespace battleship
                         {
                             txt_chatlog.Text += "Enemy cruiser đã bị bắn chìm!" + Environment.NewLine;
                         }
-                        else if (message.body.Equals("submarine"))
-                        {
-                            txt_chatlog.Text += "Enemy submarine đã bị bắn chìm!" + Environment.NewLine;
-                        }
-                        else if (message.body.Equals("destroyer"))
-                        { 
-                            txt_chatlog.Text += "Enemy destroyer đã bị bắn chìm!" + Environment.NewLine;
-                        }
+                        
 
                     }
                     else if (message.type.Equals("miss"))
@@ -1258,48 +1080,7 @@ namespace battleship
                     return true;
                 }
             }
-            // Check submarine
-           /* for (int i = 0; i < 3; i++)
-            {
-                if (Submarine[i].X == c.X && Submarine[i].Y == c.Y)
-                {
-                    Submarine[i].Hit = true;
-                    bool sunk = true;
-                    for (int j = 0; j < 3; j++)
-                    {
-                        if (Submarine[j].Hit == false)
-                            sunk = false;
-                    }
-                    if (sunk)
-                    {
-                        playerFleet.SubmarineSunk = true;
-                        Sunk("submarine");
-
-                    }
-                    return true;
-                }
-            }
-            // Check destroyer
-            for (int i = 0; i < 2; i++)
-            {
-                if (Destroyer[i].X == c.X && Destroyer[i].Y == c.Y)
-                {
-                    Destroyer[i].Hit = true;
-                    bool sunk = true;
-                    for (int j = 0; j < 2; j++)
-                    {
-                        if (Destroyer[j].Hit == false)
-                            sunk = false;
-                    }
-                    if (sunk)
-                    {
-                        playerFleet.DestroyerSunk = true;
-                        Sunk("destroyer");
-
-                    }
-                    return true;
-                }
-            }*/
+          
 
             return false;
         }
