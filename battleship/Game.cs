@@ -35,8 +35,6 @@ namespace battleship
         bool CarrierPlaced = false;
         bool BattleshipPlaced = false;
         bool CruiserPlaced = false;
-        bool SubmarinePlaced = false;
-        bool DestroyerPlaced = false;
         Coord head = new Coord(-1, -1);
         Coord tail = new Coord(-1, -1);
         bool up = false;
@@ -48,8 +46,7 @@ namespace battleship
         Coord[] Carrier = new Coord[5];
         Coord[] Battleship = new Coord[4];
         Coord[] Cruiser = new Coord[3];
-        Coord[] Submarine = new Coord[3];
-        Coord[] Destroyer = new Coord[2];
+       
 
         string ipAddress = "";
         int port = 357;
@@ -158,7 +155,6 @@ namespace battleship
                 playerFleet.Carrier = Carrier;
                 playerFleet.Battleship = Battleship;
                 playerFleet.Cruiser = Cruiser;
-                playerFleet.Submarine = Submarine;
                 if (server == false)
                     signalReady();
             }
@@ -905,14 +901,6 @@ namespace battleship
                         else if (message.body.Equals("cruiser"))
                         {
                             txt_chatlog.Text += "Enemy cruiser đã bị bắn chìm!" + Environment.NewLine;
-                        }
-                        else if (message.body.Equals("submarine"))
-                        {
-                            txt_chatlog.Text += "Enemy submarine đã bị bắn chìm!" + Environment.NewLine;
-                        }
-                        else if (message.body.Equals("destroyer"))
-                        {
-                            txt_chatlog.Text += "Enemy destroyer đã bị bắn chìm!" + Environment.NewLine;
                         }
 
                     }
