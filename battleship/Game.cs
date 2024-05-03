@@ -18,34 +18,34 @@ namespace battleship
 {
     public partial class InGame : Form
     {
-        // Arrays to hold the buttons of each board
+        
         Button[,] EnemyArray = new Button[10, 10];
         Button[,] PlayerArray = new Button[10, 10];
 
         Fleet playerFleet = new Fleet();
         Fleet opponentFleet = new Fleet();
 
-        // Arrays to hold the status of a zone
+        
         bool[,] PlayerZones = new bool[10, 10];
         bool[,] EnemyZones = new bool[10, 10];
 
-        // bools for ship placement
+        
         bool PlacingShips = true;
         bool PlacingFirstClick = true;
         bool CarrierPlaced = false;
         bool BattleshipPlaced = false;
         bool CruiserPlaced = false;
-        Coord head = new Coord(-1, -1);
-        Coord tail = new Coord(-1, -1);
+        POS head = new POS(-1, -1);
+        POS tail = new POS(-1, -1);
         bool up = false;
         bool down = false;
         bool left = false;
         bool right = false;
-        Coord lastShot = new Coord(0, 0);
+        POS lastShot = new POS(0, 0);
 
-        Coord[] Carrier = new Coord[5];
-        Coord[] Battleship = new Coord[4];
-        Coord[] Cruiser = new Coord[3];
+        POS[] Carrier = new POS[5];
+        POS[] Battleship = new POS[4];
+        POS[] Cruiser = new POS[3];
        
 
         string ipAddress = "";
@@ -73,25 +73,19 @@ namespace battleship
             InitializeComponent();
         }
 
-        // Game start
+        
         private void StartGame()
         {
-            // Need to set to true 
             PlacingShips = true;
-            EnableMyBoard();
-
-           
+            EnableMyBoard(); 
         }
-
-        // Handles the placing of the ships
-        private void PlaceShips(Coord c)
+        private void PlaceShips(POS c)
         {
             if (!CarrierPlaced)
             {
 
                 if (PlacingFirstClick)
                 {
-                    // Set the head equal to the coord
                     PlacingFirstClick = false;
                     head = c;
                     DisableMyBoard();
@@ -111,7 +105,6 @@ namespace battleship
             {
                 if (PlacingFirstClick)
                 {
-                    // Set the head equal to the coord
                     PlacingFirstClick = false;
                     head = c;
                     DisableMyBoard();
@@ -131,7 +124,6 @@ namespace battleship
             {
                 if (PlacingFirstClick)
                 {
-                    // Set the head equal to the coord
                     PlacingFirstClick = false;
                     head = c;
                     DisableMyBoard();
@@ -147,8 +139,6 @@ namespace battleship
                     EnableMyBoard();
                 }
             }
-           
-
             if (CarrierPlaced && BattleshipPlaced && CruiserPlaced)
             {
                 DisableMyBoard();
@@ -158,81 +148,73 @@ namespace battleship
                 if (server == false)
                     signalReady();
             }
-
-
         }
-
-        // get ship positions
         private void ShipPOS(int n, string name)
         {
-            Coord[] temp;
+            POS[] temp;
             if (n == 5)
-                temp = new Coord[5];
+                temp = new POS[5];
             else if (n == 4)
-                temp = new Coord[4];
+                temp = new POS[4];
             else if (n == 3)
-                temp = new Coord[3];
+                temp = new POS[3];
             else if (n == 2)
-                temp = new Coord[2];
+                temp = new POS[2];
             else
             {
-                temp = new Coord[1];
+                temp = new POS[1];
             }
 
 
             int k = 0;
             if (tail.X < head.X)
             {
-                // Went left
                 for (int j = head.X; j >= tail.X; j--)
                 {
                     PlayerZones[j, head.Y] = true;
                     PlayerArray[j, head.Y].Enabled = false;
                     PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Blue;
                     PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    Coord t = new Coord(j, head.Y);
+                    POS t = new POS(j, head.Y);
                     temp[k] = t;
                     k++;
                 }
             }
             else if (tail.X > head.X)
             {
-                // Went Right
                 for (int j = head.X; j <= tail.X; j++)
                 {
                     PlayerZones[j, head.Y] = true;
                     PlayerArray[j, head.Y].Enabled = false;
                     PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Blue;
                     PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    Coord t = new Coord(j, head.Y);
+                    POS t = new POS(j, head.Y);
                     temp[k] = t;
                     k++;
                 }
             }
             else if (tail.Y < head.Y)
             {
-                // Went up
                 for (int i = head.Y; i >= tail.Y; i--)
                 {
                     PlayerZones[head.X, i] = true;
                     PlayerArray[head.X, i].Enabled = false;
                     PlayerArray[head.X, i].BackColor = System.Drawing.Color.Blue;
                     PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    Coord t = new Coord(head.X, i);
+                    POS t = new POS(head.X, i);
                     temp[k] = t;
                     k++;
                 }
             }
             else if (tail.Y > head.Y)
             {
-                // Went Down
                 for (int i = head.Y; i <= tail.Y; i++)
                 {
                     PlayerZones[head.X, i] = true;
                     PlayerArray[head.X, i].Enabled = false;
                     PlayerArray[head.X, i].BackColor = System.Drawing.Color.Blue;
                     PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    Coord t = new Coord(head.X, i);
+                    POS t = new POS(head.X, i);
                     temp[k] = t;
                     k++;
                 }
@@ -249,11 +231,10 @@ namespace battleship
 
             else
             {
-                temp = new Coord[1];
+                temp = new POS[1];
             }
         }
 
-        // private void draw ship
         private void DrawShip(int size)
         {
             if (up)
@@ -281,7 +262,6 @@ namespace battleship
 
             if (tail.X < head.X)
             {
-                // Went left
                 for (int j = head.X; j >= tail.X; j--)
                 {
                     PlayerZones[j, head.Y] = true;
@@ -292,7 +272,6 @@ namespace battleship
             }
             else if (tail.X > head.X)
             {
-                // Went Right
                 for (int j = head.X; j <= tail.X; j++)
                 {
                     PlayerZones[j, head.Y] = true;
@@ -303,7 +282,6 @@ namespace battleship
             }
             else if (tail.Y < head.Y)
             {
-                // Went up
                 for (int i = head.Y; i >= tail.Y; i--)
                 {
                     PlayerZones[head.X, i] = true;
@@ -314,7 +292,6 @@ namespace battleship
             }
             else if (tail.Y > head.Y)
             {
-                // Went Down
                 for (int i = head.Y; i <= tail.Y; i++)
                 {
                     PlayerZones[head.X, i] = true;
@@ -326,16 +303,12 @@ namespace battleship
             }
         }
 
-        // Enable paths for ships
-        private void PathEnable(string ship, Coord c)
+        private void PathEnable(string ship, POS c)
         {
             if (ship.Equals("Carrier"))
             {
-                // Size 5
-                //Check left
                 if (c.X - 4 >= 0)
                 {
-                    // Check left
                     if (PlayerZones[c.X - 1, c.Y] == false && PlayerZones[c.X - 2, c.Y] == false && PlayerZones[c.X - 3, c.Y] == false && PlayerZones[c.X - 4, c.Y] == false)
                     {
                         left = true;
@@ -549,12 +522,12 @@ namespace battleship
             EnemyArray[x, y].Enabled = false;
             EDEnemyButtons(false);
             label_turn.Text = "Lượt của địch";
-            Coord newcoord = new Coord(x, y);
+            POS newcoord = new POS(x, y);
             Shoot(newcoord);
         }
 
         // shoot
-        private void Shoot(Coord c)
+        private void Shoot(POS c)
         {
             msg m = new msg();
             m.type = "move";
@@ -581,7 +554,7 @@ namespace battleship
 
             if (PlacingShips)
             {
-                Coord temp = new Coord(x, y);
+                POS temp = new POS(x, y);
                 PlaceShips(temp);
             }
 
@@ -594,7 +567,7 @@ namespace battleship
             t.name = txt_username.Text;
             t.body = txt_chat.Text;
             t.type = "chat";
-            t.move = new Coord(0, 0);
+            t.move = new POS(0, 0);
             txt_chat.Text = "";
             string output = JsonConvert.SerializeObject(t);
             writer.WriteLine(output);
@@ -695,7 +668,7 @@ namespace battleship
             m.type = "ready";
             m.body = "ready";
             m.name = txt_username.Text;
-            m.move = new Coord(0, 0);
+            m.move = new POS(0, 0);
             string output = JsonConvert.SerializeObject(m);
             writer.WriteLine(output);
             writer.Flush();
@@ -718,7 +691,7 @@ namespace battleship
                     msg message = JsonConvert.DeserializeObject<msg>(clientInput);
                     msg reply = new msg();
                     reply.name = txt_username.Text;
-                    reply.move = new Coord(0, 0);
+                    reply.move = new POS(0, 0);
 
                     if (message.type.Equals("chat"))
                     {
@@ -845,7 +818,7 @@ namespace battleship
                     msg message = JsonConvert.DeserializeObject<msg>(clientInput);
                     msg reply = new msg();
                     reply.name = txt_username.Text;
-                    reply.move = new Coord(0, 0);
+                    reply.move = new POS(0, 0);
 
                     if (message.type.Equals("chat"))
                     {
@@ -920,8 +893,6 @@ namespace battleship
                         label_turn.Text = "BẠN ĐÃ THẮNG";
                         Win w = new Win();
                         w.ShowDialog();
-                        //EDEnemyButtons(false);
-                        //MasterLock();
                     }
                     else if (message.type.Equals("ready"))
                     {
@@ -965,7 +936,7 @@ namespace battleship
             msg n = new msg();
             n.type = "sunk";
             n.name = txt_username.Text;
-            n.move = new Coord();
+            n.move = new POS();
             n.body = name;
             string output = JsonConvert.SerializeObject(n);
             writer.WriteLine(output);
@@ -977,7 +948,7 @@ namespace battleship
                 msg w = new msg();
                 w.type = "won";
                 w.name = txt_username.Text;
-                w.move = new Coord();
+                w.move = new POS();
                 n.body = "Winner Winner!!";
                 string outputWin = JsonConvert.SerializeObject(w);
                 writer.WriteLine(outputWin);
@@ -1001,7 +972,7 @@ namespace battleship
             }
         }
 
-        private bool checkHit(Coord c)
+        private bool checkHit(POS c)
         {
             // check carrier
             for (int i = 0; i < 5; i++)
@@ -1091,7 +1062,28 @@ namespace battleship
             txt_chatlog.SelectionStart = txt_chatlog.Text.Length;
             txt_chatlog.ScrollToCaret();
         }
+        private void btn_play_Click(object sender, EventArgs e)
+        {
+            ipAddress = txt_IP.Text;
+            port = Int32.Parse(txt_Port.Text);
+            label2.Text = "Đang Chơi";
+            label2.ForeColor = System.Drawing.Color.Blue;
+            btn_play.Enabled = false;
+            buttonHost.Enabled = false;
+            server = false;
+            Thread t = new Thread(RunClient);
+            t.Start();
+            StartGame();
+        }
 
+        private void buttonHost_Click_1(object sender, EventArgs e)
+        {
+            Server();
+            buttonHost.Enabled = false;
+            btn_play.Enabled = false;
+            StartGame();
+            EDEnemyButtons(false);
+        }
         private void textBoxPort_TextChanged(object sender, EventArgs e)
         {
 
@@ -1132,29 +1124,7 @@ namespace battleship
 
         }
 
-        private void btn_play_Click(object sender, EventArgs e)
-        {
-                ipAddress = txt_IP.Text;
-                port = Int32.Parse(txt_Port.Text);
-                label2.Text = "You Playing";
-                label2.ForeColor = System.Drawing.Color.Blue;
-                btn_play.Enabled = false;
-                buttonHost.Enabled = false;
-                server = false;
-                Thread t = new Thread(RunClient);
-                t.Start();
-                StartGame();
-            
-        }
-
-        private void buttonHost_Click_1(object sender, EventArgs e)
-        {
-            Server();
-            buttonHost.Enabled = false;
-            btn_play.Enabled = false;
-            StartGame();
-            EDEnemyButtons(false);
-        }
+        
 
 
     }
