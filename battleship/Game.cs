@@ -14,6 +14,7 @@ using System.Net.Sockets;
 using System.Net;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Media;
 namespace battleship
 {
     public partial class InGame : Form
@@ -673,7 +674,8 @@ namespace battleship
             writer.WriteLine(output);
             writer.Flush();
         }
-
+        string soundHit = @"hit.wav"; //thêm âm thanh khi bắn trúng 
+        string soundMiss = @"miss.wav"; //thêm âm thanh khi bắn trượt 
         private void RunClient()
         {
             ipAddress = txt_IP.Text;
@@ -752,11 +754,19 @@ namespace battleship
                     }
                     else if (message.type.Equals("miss"))
                     {
+                        using (SoundPlayer player = new SoundPlayer(soundMiss))
+                        {
+                            player.Play();
+                        }
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.White;
                         txt_chatlog.Text += "Bắn trượt!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("hit"))
                     {
+                        using (SoundPlayer player = new SoundPlayer(soundHit))
+                        {
+                            player.Play();
+                        }
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
                         txt_chatlog.Text += "Bắn trúng!" + Environment.NewLine;
                     }
@@ -880,11 +890,19 @@ namespace battleship
                     }
                     else if (message.type.Equals("miss"))
                     {
+                        using (SoundPlayer player = new SoundPlayer(soundMiss))
+                        {
+                            player.Play();
+                        }
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.White;
                         txt_chatlog.Text += "Bắn trượt!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("hit"))
                     {
+                        using (SoundPlayer player = new SoundPlayer(soundHit))
+                        {
+                            player.Play();
+                        }
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
                         txt_chatlog.Text += "Bắn trúng!" + Environment.NewLine;
                     }
