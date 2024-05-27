@@ -36,6 +36,7 @@ namespace battleship
         bool CarrierPlaced = false;
         bool BattleshipPlaced = false;
         bool CruiserPlaced = false;
+        bool BaitPlaced = false;
         POS head = new POS(-1, -1);
         POS tail = new POS(-1, -1);
         bool up = false;
@@ -47,7 +48,8 @@ namespace battleship
         POS[] Carrier = new POS[5];
         POS[] Battleship = new POS[4];
         POS[] Cruiser = new POS[3];
-       
+        POS[] Bait = new POS[2];
+
 
         string ipAddress = "";
         int port = 357;
@@ -140,12 +142,32 @@ namespace battleship
                     EnableMyBoard();
                 }
             }
-            if (CarrierPlaced && BattleshipPlaced && CruiserPlaced)
+            else if (!BaitPlaced)
+            {
+                if (PlacingFirstClick)
+                {
+                    PlacingFirstClick = false;
+                    head = c;
+                    DisableMyBoard();
+                    PathEnable("Bait", head);
+                }
+                else
+                {
+                    tail = c;
+                    ShipPOS(2, "Bait");
+                    DrawShip(1);
+                    PlacingFirstClick = true;
+                    BaitPlaced = true;
+                    EnableMyBoard();
+                }
+            }
+            if (CarrierPlaced && BattleshipPlaced && CruiserPlaced && BaitPlaced)
             {
                 DisableMyBoard();
                 playerFleet.Carrier = Carrier;
                 playerFleet.Battleship = Battleship;
                 playerFleet.Cruiser = Cruiser;
+                playerFleet.Bait = Bait;
                 if (server == false)
                     signalReady();
             }
@@ -232,7 +254,8 @@ namespace battleship
                 Battleship = temp;
             else if (name.Equals("Cruiser"))
                 Cruiser = temp;
-            
+            else if (name.Equals("Bait"))
+                Bait = temp;
 
             else
             {
@@ -482,6 +505,61 @@ namespace battleship
                     }
                 }
             }
+            else if (ship.Equals("Bait"))
+            {
+                if (c.X - 1 >= 0)
+                {
+                    // Check left
+                    if (PlayerZones[c.X - 1, c.Y] == false)
+                    {
+                        left = true;
+                        PlayerArray[c.X, c.Y].Enabled = true;
+                        PlayerArray[c.X - 1, c.Y].Enabled = true;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X - 1, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    }
+                }
+
+                // Check Right
+                if (c.X + 1 <= 9)
+                {
+                    // Check left
+                    if (PlayerZones[c.X + 1, c.Y] == false)
+                    {
+                        right = true;
+                        PlayerArray[c.X, c.Y].Enabled = true;
+                        PlayerArray[c.X + 1, c.Y].Enabled = true;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X + 1, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    }
+                }
+
+                // Check Up
+                if (c.Y - 1 >= 0)
+                {
+                    if (PlayerZones[c.X, c.Y - 1] == false)
+                    {
+                        up = true;
+                        PlayerArray[c.X, c.Y].Enabled = true;
+                        PlayerArray[c.X, c.Y - 1].Enabled = true;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y - 1].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    }
+                }
+
+                // Check Down
+                if (c.Y + 1 <= 9)
+                {
+                    if (PlayerZones[c.X, c.Y + 1] == false)
+                    {
+                        down = true;
+                        PlayerArray[c.X, c.Y].Enabled = true;
+                        PlayerArray[c.X, c.Y + 1].Enabled = true;
+                        PlayerArray[c.X, c.Y].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                        PlayerArray[c.X, c.Y + 1].FlatAppearance.BorderColor = System.Drawing.Color.Green;
+                    }
+                }
+            }
 
         }
 
@@ -530,7 +608,7 @@ namespace battleship
             EnemyZones[x, y] = true;
             EnemyArray[x, y].Enabled = false;
             EDEnemyButtons(false);
-            label_turn.Text = "Lượt của địch";
+            
             POS newcoord = new POS(x, y);
             Shoot(newcoord);
         }
@@ -765,12 +843,14 @@ namespace battleship
                         AudioContext.missSound.Play();
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.White;
                         txt_chatlog.Text += "Bắn trượt!" + Environment.NewLine;
+                        label_turn.Text = "Lượt của địch";
                     }
                     else if (message.type.Equals("hit"))
                     {
                         AudioContext.hitSound.Play();
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
                         txt_chatlog.Text += "Bắn trúng!" + Environment.NewLine;
+                        label_turn.Text = "Lượt của bạn";
                         txt_chatlog.Text += "Bạn được băn thêm 1 viên!" + Environment.NewLine;
                         EDEnemyButtons(true);
                     }
@@ -904,8 +984,7 @@ namespace battleship
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
                         txt_chatlog.Text += "Bắn trúng!" + Environment.NewLine;
                         txt_chatlog.Text += "Bạn được băn thêm 1 viên!" + Environment.NewLine;
-                        EDEnemyButtons(true); 
-
+                        EDEnemyButtons(true);
                     }
                     else if (message.type.Equals("won"))
                     {
@@ -1058,7 +1137,23 @@ namespace battleship
                     return true;
                 }
             }
-          
+            //check bait
+            for (int i = 0; i < 2; i++)
+            {
+                if (Bait[i].X == c.X && Bait[i].Y == c.Y)
+                {
+                    Bait[i].Hit = true;
+                    bool sunk = true;
+                    for (int j = 0; j < 2; j++)
+                    {
+                        if (Bait[j].Hit == false)
+                            sunk = false;
+                    }
+                    
+                    return true;
+                }
+            }
+
 
             return false;
         }

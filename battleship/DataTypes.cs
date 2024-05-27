@@ -24,14 +24,16 @@ namespace battleship
         public POS[] Cruiser;
         public bool CarrierSunk;
         public bool BattleshipSunk;
-        public bool CruiserSunk;                     
-        
+        public bool CruiserSunk;
+        public POS[] Bait;
 
-        public Fleet(POS[] car, POS[] bat, POS[] cru)
+
+        public Fleet(POS[] car, POS[] bat, POS[] cru, POS[] bait)
         {
             Carrier = car;
             Battleship = bat;
             Cruiser = cru;
+            Bait = bait;
             CarrierSunk = false;
             BattleshipSunk = false;
             CruiserSunk = false;    
