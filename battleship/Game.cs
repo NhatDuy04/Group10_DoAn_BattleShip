@@ -771,6 +771,8 @@ namespace battleship
                         AudioContext.hitSound.Play();
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
                         txt_chatlog.Text += "Bắn trúng!" + Environment.NewLine;
+                        txt_chatlog.Text += "Bạn được băn thêm 1 viên!" + Environment.NewLine;
+                        EDEnemyButtons(true);
                     }
                     else if (message.type.Equals("won"))
                     {
@@ -901,6 +903,9 @@ namespace battleship
                         AudioContext.hitSound.Play();
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
                         txt_chatlog.Text += "Bắn trúng!" + Environment.NewLine;
+                        txt_chatlog.Text += "Bạn được băn thêm 1 viên!" + Environment.NewLine;
+                        EDEnemyButtons(true); 
+
                     }
                     else if (message.type.Equals("won"))
                     {
