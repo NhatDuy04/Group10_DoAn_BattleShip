@@ -754,19 +754,13 @@ namespace battleship
                     }
                     else if (message.type.Equals("miss"))
                     {
-                        using (SoundPlayer player = new SoundPlayer(soundMiss))
-                        {
-                            player.Play();
-                        }
+                        AudioContext.missSound.Play();
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.White;
                         txt_chatlog.Text += "Bắn trượt!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("hit"))
                     {
-                        using (SoundPlayer player = new SoundPlayer(soundHit))
-                        {
-                            player.Play();
-                        }
+                        AudioContext.hitSound.Play();
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
                         txt_chatlog.Text += "Bắn trúng!" + Environment.NewLine;
                     }
@@ -890,19 +884,13 @@ namespace battleship
                     }
                     else if (message.type.Equals("miss"))
                     {
-                        using (SoundPlayer player = new SoundPlayer(soundMiss))
-                        {
-                            player.Play();
-                        }
+                        AudioContext.missSound.Play();
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.White;
                         txt_chatlog.Text += "Bắn trượt!" + Environment.NewLine;
                     }
                     else if (message.type.Equals("hit"))
                     {
-                        using (SoundPlayer player = new SoundPlayer(soundHit))
-                        {
-                            player.Play();
-                        }
+                        AudioContext.hitSound.Play();
                         EnemyArray[lastShot.X, lastShot.Y].BackColor = System.Drawing.Color.Red;
                         txt_chatlog.Text += "Bắn trúng!" + Environment.NewLine;
                     }

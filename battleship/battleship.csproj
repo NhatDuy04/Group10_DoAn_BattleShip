@@ -157,5 +157,11 @@
   <ItemGroup>
     <None Include="Resources\credit.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miss.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
