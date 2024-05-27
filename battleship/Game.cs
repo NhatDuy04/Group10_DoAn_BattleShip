@@ -174,7 +174,8 @@ namespace battleship
                 {
                     PlayerZones[j, head.Y] = true;
                     PlayerArray[j, head.Y].Enabled = false;
-                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[j, head.Y].BackgroundImage = Properties.Resources.transport__1_;
+                    PlayerArray[j, head.Y].BackgroundImageLayout = ImageLayout.Stretch;
                     PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     POS t = new POS(j, head.Y);
                     temp[k] = t;
@@ -187,7 +188,8 @@ namespace battleship
                 {
                     PlayerZones[j, head.Y] = true;
                     PlayerArray[j, head.Y].Enabled = false;
-                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[j, head.Y].BackgroundImage = Properties.Resources.transport__1_;
+                    PlayerArray[j, head.Y].BackgroundImageLayout = ImageLayout.Stretch;
                     PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     POS t = new POS(j, head.Y);
                     temp[k] = t;
@@ -200,7 +202,8 @@ namespace battleship
                 {
                     PlayerZones[head.X, i] = true;
                     PlayerArray[head.X, i].Enabled = false;
-                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[head.X, i].BackgroundImage = Properties.Resources.transport__1_;
+                    PlayerArray[head.X, i].BackgroundImageLayout = ImageLayout.Stretch;
                     PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     POS t = new POS(head.X, i);
                     temp[k] = t;
@@ -213,7 +216,8 @@ namespace battleship
                 {
                     PlayerZones[head.X, i] = true;
                     PlayerArray[head.X, i].Enabled = false;
-                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[head.X, i].BackgroundImage = Properties.Resources.transport__1_;
+                    PlayerArray[head.X, i].BackgroundImageLayout = ImageLayout.Stretch;
                     PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                     POS t = new POS(head.X, i);
                     temp[k] = t;
@@ -267,7 +271,8 @@ namespace battleship
                 {
                     PlayerZones[j, head.Y] = true;
                     PlayerArray[j, head.Y].Enabled = false;
-                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[j, head.Y].BackgroundImage = Properties.Resources.transport__1_;
+                    PlayerArray[j, head.Y].BackgroundImageLayout = ImageLayout.Stretch;
                     PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                 }
             }
@@ -277,7 +282,8 @@ namespace battleship
                 {
                     PlayerZones[j, head.Y] = true;
                     PlayerArray[j, head.Y].Enabled = false;
-                    PlayerArray[j, head.Y].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[j, head.Y].BackgroundImage = Properties.Resources.transport__1_;
+                    PlayerArray[j, head.Y].BackgroundImageLayout = ImageLayout.Stretch;
                     PlayerArray[j, head.Y].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                 }
             }
@@ -287,7 +293,8 @@ namespace battleship
                 {
                     PlayerZones[head.X, i] = true;
                     PlayerArray[head.X, i].Enabled = false;
-                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[head.X, i].BackgroundImage = Properties.Resources.transport__1_;
+                    PlayerArray[head.X, i].BackgroundImageLayout = ImageLayout.Stretch;
                     PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                 }
             }
@@ -297,7 +304,8 @@ namespace battleship
                 {
                     PlayerZones[head.X, i] = true;
                     PlayerArray[head.X, i].Enabled = false;
-                    PlayerArray[head.X, i].BackColor = System.Drawing.Color.Blue;
+                    PlayerArray[head.X, i].BackgroundImage = Properties.Resources.transport__1_;
+                    PlayerArray[head.X, i].BackgroundImageLayout = ImageLayout.Stretch;
                     PlayerArray[head.X, i].FlatAppearance.BorderColor = System.Drawing.Color.Blue;
                 }
 
